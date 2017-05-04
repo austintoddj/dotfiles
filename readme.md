@@ -2,17 +2,17 @@ macOS Development Environment Setup: Easy-to-understand instructions for spinnin
 
 You won't always have unlimited freedom on your machine. Use the Restricted Access setup or the Open Access setup respectively.
 
-# Setup (Restricted Access)
+## Setup (Restricted Access)
 
-## Intro
+### Intro
 
 - Download the [Dev Setup repository](https://github.com/austintoddj/dev-setup)
 
-## Fonts
+### Fonts
 
 - Install Source Code Pro (OTF)
 
-## Bash
+### Bash
 
 - From the Home(`~`) directory, replace `.bashrc`, `.bash_profile`
 - From the Home(`~`) directory, replace `.vimrc`, `.vim/colors/`
@@ -21,29 +21,46 @@ You won't always have unlimited freedom on your machine. Use the Restricted Acce
 - Update Font/Cursor/Startup as needed
 - Restart Terminal
 
-## Sublime Text 2
+### Sublime Text 2
 
 - Download Sublime repository from personal GitHub
 - Install the [Package Manager](https://packagecontrol.io/installation)
 - Install the `Material` package
 - Activate the theme in Preferences > Color Scheme > Material > schemes > Material-Theme
 - Replace the contents of `Preferences.sublime-settings`, `Distraction Free.sublime-settings`
-- Install <PACKAGES>
+- Install the following packages:
+    - AutoFileName
+    - Autoprefixer
+    - Blade Snippets
+    - Blade Spacer
+    - BracketHighlighter
+    - Colorsublime-Themes
+    - Emmet
+    - FuzzyFileNav
+    - FuzzyFilePath
+    - Laravel Blade Highlighter
+    - Monokai Extended
+    - Package Control
+    - PhpDoc
+    - Predawn
+    - PyV8
+    - SideBarEnhancements
+    - SublimeCodeIntel
 - Restart Sublime
 - Enter License Key
 
-# Setup (Open Access)
+## Setup (Open Access)
 
-## Intro
+### Intro
 
 - Download the [Dev Setup repository](https://github.com/austintoddj/dev-setup)
 
-## Fonts
+### Fonts
 
 - Install Source Code Pro (OTF)
 - Install Operator Mono (OTF)
 
-## Bash
+### Bash
 
 - From the Home(`~`) directory, replace `.bashrc`, `.bash_profile`
 - From the Home(`~`) directory, replace `.vimrc`, `.vim/colors/`
@@ -52,21 +69,41 @@ You won't always have unlimited freedom on your machine. Use the Restricted Acce
 - Update Font/Cursor/Startup as needed
 - Restart Terminal
 
-## Sublime Text 3
+### Sublime Text 3
 
 - Install the [Package Manager](https://packagecontrol.io/installation)
 - Install the [Material Theme](https://github.com/equinusocio/material-theme)
 - Replace the contents of `Preferences.sublime-settings`, `Distraction Free.sublime-settings`
-- Install <PACKAGES>
+- Install the following packages:
+    - AutoFileName
+    - Autoprefixer
+    - Blade Snippets
+    - Blade Spacer
+    - BracketHighlighter
+    - Colorsublime-Themes
+    - Emmet
+    - FuzzyFileNav
+    - FuzzyFilePath
+    - Laravel Blade Highlighter
+    - Monokai Extended
+    - Package Control
+    - PhpDoc
+    - Predawn
+    - PyV8
+    - SideBarEnhancements
+    - SublimeCodeIntel
 - Restart Sublime
 - Enter License Key
 
-## PHPStorm
+### PHPStorm
 
 - Install `Material Theme UI` in Settings > Preferences > Plugins > Browse Repositories
 - Restart PHPStorm
 - IDE theme (not the code color scheme) can be changed in Tools > Material Theme
-- Install <PLUGINS>
+- Install the following plugins:
+    - CodeGlance
+    - Laravel Plugin
+    - Material Theme UI
 - Enter License Key
 
 
