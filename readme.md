@@ -2,7 +2,7 @@
     <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Screenshots/header.jpg">
 </p>
 
-macOS Development Environment Setup: Easy-to-understand instructions for spinning up a new machine with widely-used developer tools like Vim, Sublime Text, Bash, PHPStorm, Git, and dev-based macOS defaults.
+Easy-to-understand instructions for spinning up a new machine with widely-used developer tools like Vim, Sublime Text, Bash, PHPStorm, Git, and dev-based macOS defaults.
 
 You won't always have unlimited freedom on your machine. Use the [Restricted Access](#setup-restricted-access) setup or the [Open Access](#setup-open-access) setup respectively.
 
