@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/logo.png">
+    <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Screenshots/header.jpg">
 </p>
 
 macOS Development Environment Setup: Easy-to-understand instructions for spinning up a new machine with widely-used developer tools like Vim, Sublime Text, Bash, PHPStorm, Git, and dev-based macOS defaults.
