@@ -167,3 +167,7 @@
 [url "git://gist.github.com/"]
 
     insteadOf = "gist:"
+
+[user]
+	name = Todd Austin
+	email = austin.todd.j@gmail.com
