@@ -93,9 +93,7 @@
         "CVS"
     ],
     "font_face": "Operator Mono",
-    "font_options":
-    [
-    ],
+    "font_options":[],
     "font_size": 12,
     "gpu_window_buffer": "auto",
     "gutter": true,
@@ -103,19 +101,13 @@
     "highlight_modified_tabs": false,
     "hot_exit": true,
     "ignored_packages":
-    [
-        "Vintage"
-    ],
+    ["Vintage"],
     "indent_guide_options":
-    [
-        "draw_normal"
-    ],
+    ["draw_normal"],
     "indent_subsequent_lines": true,
     "indent_to_bracket": false,
     "index_exclude_patterns":
-    [
-        "*.log"
-    ],
+    ["*.log"],
     "index_files": true,
     "line_numbers": true,
     "line_padding_bottom": 3,

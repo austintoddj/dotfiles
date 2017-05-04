@@ -93,10 +93,7 @@
 		"CVS"
 	],
 	"font_face": "Source Code Pro",
-	"font_options":
-	[
-		// "gray_antialias", "subpixel_antialias"    // For retina Mac & Windows
-	],
+	"font_options":[],
 	"font_size": 11,
 	"gpu_window_buffer": "auto",
 	"gutter": true,
@@ -104,19 +101,13 @@
 	"highlight_modified_tabs": false,
 	"hot_exit": true,
 	"ignored_packages":
-	[
-		"Vintage"
-	],
+	["Vintage"],
 	"indent_guide_options":
-	[
-		"draw_normal"
-	],
+	["draw_normal"],
 	"indent_subsequent_lines": true,
 	"indent_to_bracket": false,
 	"index_exclude_patterns":
-	[
-		"*.log"
-	],
+	["*.log"],
 	"index_files": true,
 	"line_numbers": true,
 	"line_padding_bottom": 3,
@@ -129,6 +120,13 @@
 	"match_brackets_square": true,
 	"match_selection": true,
 	"match_tags": true,
+	"material_theme_small_tab": true ,			// Set small tabs
+	"material_theme_small_statusbar": true ,	// Set small status bar
+	"material_theme_compact_sidebar": true , 	// Set compact side bar
+	"material_theme_compact_panel": true , 		// Set minimal padding for the search panel
+	"material_theme_bold_tab": true , 			// Make the tab labels bolder
+	"material_theme_tabs_separator": true , 	// Show tabs separator, this disables tab hover animation
+	"material_theme_tabs_autowidth": true , 	// Enable autowidth for tabs
 	"move_to_limit_on_up_down": false,
 	"open_files_in_new_window": true,
 	"overlay_scroll_bars": "enabled",
@@ -157,12 +155,4 @@
 	"want_vertical_scroll_bar": false,
 	"word_wrap": "true",
 	"wrap_width": 0,
-
-	"material_theme_small_tab"                : true , // Set small tabs
-	"material_theme_small_statusbar"          : true , // Set small status bar
-	"material_theme_compact_sidebar"          : true , // Set compact side bar
-	"material_theme_compact_panel"            : true , // Set minimal padding for the search panel
-	"material_theme_bold_tab"                 : true , // Make the tab labels bolder
-	"material_theme_tabs_separator"           : true , // Show tabs separator, this disables tab hover animation
-	"material_theme_tabs_autowidth"           : true , // Enable autowidth for tabs
 }
