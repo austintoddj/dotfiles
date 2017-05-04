@@ -59,8 +59,8 @@
     alias which='type -all'                     # which:        Find executables
     alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
     alias show_options='shopt'                  # Show_options: Display bash options settings
-    md() { mkdir -p "$@" && cd "$@" ; }           # Make a directory and enter it
-    rd() { rm -rf "$@" ; }                        # Remove a directory and its files
+    md() { mkdir -p "$@" && cd "$@" ; }         # Make a directory and enter it
+    rd() { rm -rf "$@" ; }                      # Remove a directory and its files
     trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
     alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
 
@@ -165,8 +165,7 @@
 #   ---------------------------
 #   6. NETWORKING
 #   ---------------------------
-
-    alias myip='curl ip.appspot.com'                    # myip:         Public facing IP Address
+    alias myip='curl ipecho.net/plain; echo'           	# myip:         Public facing IP Address
     alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
     alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
     alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
