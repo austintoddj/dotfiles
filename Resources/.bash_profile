@@ -59,8 +59,8 @@
     alias which='type -all'                     # which:        Find executables
     alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
     alias show_options='shopt'                  # Show_options: Display bash options settings
-    md() { mkdir -p "$@" && cd "$@" }           # Make a directory and enter it
-    rd() { rm -rf "$@" }                        # Remove a directory and its files
+    md() { mkdir -p "$@" && cd "$@" ; }           # Make a directory and enter it
+    rd() { rm -rf "$@" ; }                        # Remove a directory and its files
     trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
     alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
 
