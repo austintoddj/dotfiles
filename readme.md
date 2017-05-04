@@ -1,6 +1,6 @@
 macOS Development Environment Setup: Easy-to-understand instructions for spinning up a new machine with widely-used developer tools like Vim, Sublime Text, Bash, PHPStorm, Git, and dev-based macOS defaults.
 
-You won't always have unlimited freedom on your machine. Use the Restricted Access setup or the Open Access setup respectively.
+You won't always have unlimited freedom on your machine. Use the [Restricted Access](#setup-restricted-access) setup or the [Open Access](#setup-open-access) setup respectively.
 
 ## Setup (Restricted Access)
 
@@ -10,13 +10,13 @@ You won't always have unlimited freedom on your machine. Use the Restricted Acce
 
 ### Fonts
 
-- Install Source Code Pro (OTF)
+- Install [Source Code Pro (OTF)](https://github.com/austintoddj/dev-setup/tree/master/Fonts/Source%20Code%20Pro)
 
 ### Bash
 
-- From the Home(`~`) directory, replace `.bashrc`, `.bash_profile`
-- From the Home(`~`) directory, replace `.vimrc`, `.vim/colors/`
-- From the Home(`~`) directory, place `.git-prompt.sh`
+- From the Home (`~`) directory, replace `.bashrc`, `.bash_profile`
+- From the Home (`~`) directory, replace `.vimrc`, `.vim/colors/`
+- From the Home (`~`) directory, place `.git-prompt.sh`
 - Open Terminal > Settings and import the `Solarized Dark ansi.terminal` theme
 - Update Font/Cursor/Startup as needed
 - Restart Terminal
@@ -39,7 +39,6 @@ You won't always have unlimited freedom on your machine. Use the Restricted Acce
     - FuzzyFileNav
     - FuzzyFilePath
     - Laravel Blade Highlighter
-    - Monokai Extended
     - Package Control
     - PhpDoc
     - Predawn
@@ -57,14 +56,14 @@ You won't always have unlimited freedom on your machine. Use the Restricted Acce
 
 ### Fonts
 
-- Install Source Code Pro (OTF)
-- Install Operator Mono (OTF)
+- Install [Source Code Pro (OTF)](https://github.com/austintoddj/dev-setup/tree/master/Fonts/Source%20Code%20Pro)
+- Install [Operator Mono (OTF)](https://github.com/austintoddj/dev-setup/tree/master/Fonts/Operator%20Mono)
 
 ### Bash
 
-- From the Home(`~`) directory, replace `.bashrc`, `.bash_profile`
-- From the Home(`~`) directory, replace `.vimrc`, `.vim/colors/`
-- From the Home(`~`) directory, place `.git-prompt.sh`
+- From the Home (`~`) directory, replace `.bashrc`, `.bash_profile`
+- From the Home (`~`) directory, replace `.vimrc`, `.vim/colors/`
+- From the Home (`~`) directory, place `.git-prompt.sh`
 - Open Terminal > Settings and import the `Solarized Dark ansi.terminal` theme
 - Update Font/Cursor/Startup as needed
 - Restart Terminal
@@ -85,7 +84,6 @@ You won't always have unlimited freedom on your machine. Use the Restricted Acce
     - FuzzyFileNav
     - FuzzyFilePath
     - Laravel Blade Highlighter
-    - Monokai Extended
     - Package Control
     - PhpDoc
     - Predawn
