@@ -2,7 +2,7 @@
     <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Resources/header.jpg">
 </p>
 
-Easy-to-understand instructions with automated setup scripts for developer tools like Vim, Sublime Text, Bash, PHPStorm, Git, and dev-based macOS defaults.
+Easy-to-understand instructions with automated setup scripts for developer tools like **Vim**, **Sublime Text**, **Bash**, **PHPStorm**, **Git**, and dev-based macOS defaults.
 
 ### Installation
 
