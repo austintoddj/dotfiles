@@ -22,23 +22,16 @@ git clone https://github.com/austintoddj/dev-setup.git && cd dev-setup && source
 
 Unzip the downloaded file and run `source init.sh` from inside.
 
-### Fonts
-
-- Install [Source Code Pro (OTF)](https://github.com/austintoddj/dev-setup/tree/master/Fonts/Source%20Code%20Pro)
-- Install [Operator Mono](https://www.typography.com/blog/introducing-operator)
-
-<img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Resources/terminal.png" width=>
 <br/>
-
+<img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Resources/terminal.png" width=>
 ### Bash
 
 - Open Terminal > Settings and import the `Solarized Dark ansi.terminal` theme
 - Update Font/Cursor/Startup as needed
 - Restart Terminal
 
-<img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Resources/sublimetext.png">
 <br/>
-
+<img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Resources/sublimetext.png">
 ### Sublime Text
 
 With the terminal, the text editor is a developer's most important tool. Everyone has their preferences, but unless you're a hardcore [Vim](http://en.wikipedia.org/wiki/Vim) user, a lot of people are going to tell you that [Sublime Text](http://www.sublimetext.com/) is currently the best one out there.
@@ -94,9 +87,8 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 - Restart Sublime
 - Enter License Key
 
-<img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Resources/phpstorm.png">
 <br/>
-
+<img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Resources/phpstorm.png">
 ### PHPStorm
 
 - Install `Material Theme UI` in Settings > Preferences > Plugins > Browse Repositories
