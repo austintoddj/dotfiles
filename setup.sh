@@ -82,9 +82,6 @@ for app in "Finder" "Safari"; do
     killall "${app}" > /dev/null 2>&1
 done
 
-# Re-open Safari
-open -a Safari
-
 # Stop the timer
 end_time=$(date +%s)
 
