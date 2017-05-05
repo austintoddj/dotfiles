@@ -4,10 +4,6 @@
 
 Easy-to-understand instructions for spinning up a new machine with widely-used developer tools like Vim, Sublime Text, Bash, PHPStorm, Git, and dev-based macOS defaults.
 
-You won't always have unlimited freedom on your machine. Use the [Restricted Access](#setup-restricted-access) setup or the [Open Access](#setup-open-access) setup respectively.
-
-## Setup (Restricted Access)
-
 ### Intro
 
 - Download the [Dev Setup repository](https://github.com/austintoddj/dev-setup)
@@ -15,12 +11,10 @@ You won't always have unlimited freedom on your machine. Use the [Restricted Acc
 ### Fonts
 
 - Install [Source Code Pro (OTF)](https://github.com/austintoddj/dev-setup/tree/master/Fonts/Source%20Code%20Pro)
+- Install [Operator Mono](https://www.typography.com/blog/introducing-operator)
 
 ### Bash
 
-- From the Home (`~`) directory, replace `.bashrc`, `.bash_profile`
-- From the Home (`~`) directory, replace `.vimrc`, `.vim/colors/`
-- From the Home (`~`) directory, place `.git-prompt.sh`
 - Open Terminal > Settings and import the `Solarized Dark ansi.terminal` theme
 - Update Font/Cursor/Startup as needed
 - Restart Terminal
@@ -51,26 +45,6 @@ You won't always have unlimited freedom on your machine. Use the [Restricted Acc
     - SublimeCodeIntel
 - Restart Sublime
 - Enter License Key
-
-## Setup (Open Access)
-
-### Intro
-
-- Download the [Dev Setup repository](https://github.com/austintoddj/dev-setup)
-
-### Fonts
-
-- Install [Source Code Pro (OTF)](https://github.com/austintoddj/dev-setup/tree/master/Fonts/Source%20Code%20Pro)
-- Install [Operator Mono (OTF)](https://github.com/austintoddj/dev-setup/tree/master/Fonts/Operator%20Mono)
-
-### Bash
-
-- From the Home (`~`) directory, replace `.bashrc`, `.bash_profile`
-- From the Home (`~`) directory, replace `.vimrc`, `.vim/colors/`
-- From the Home (`~`) directory, place `.git-prompt.sh`
-- Open Terminal > Settings and import the `Solarized Dark ansi.terminal` theme
-- Update Font/Cursor/Startup as needed
-- Restart Terminal
 
 ### Sublime Text 3
 
@@ -107,15 +81,4 @@ You won't always have unlimited freedom on your machine. Use the [Restricted Acc
     - Laravel Plugin
     - Material Theme UI
 - Enter License Key
-
-
-
-
-
-
-
-
-
-
-
 
