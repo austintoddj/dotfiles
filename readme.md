@@ -41,8 +41,7 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 #### v2
 
 - Install the [Package Manager](https://packagecontrol.io/installation)
-- Install the `Material` package
-- Activate the theme in Preferences > Color Scheme > Material > schemes > Material-Theme
+- Install the Sublime Text > v2 > `Material` theme in Packages/Themes/Material/Material-Theme.tmTheme
 - Replace the contents of `Preferences.sublime-settings`, `Distraction Free.sublime-settings`
 - Install the following packages:
     - AutoFileName
@@ -67,7 +66,7 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 #### v3
 
 - Install the [Package Manager](https://packagecontrol.io/installation)
-- Install the [Material Theme](https://github.com/equinusocio/material-theme)
+- Install the Sublime Text > v3 > `Material` theme in Packages/Material Theme/schemes/Material-Theme.tmTheme
 - Replace the contents of `Preferences.sublime-settings`, `Distraction Free.sublime-settings`
 - Install the following packages:
     - AutoFileName
