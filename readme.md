@@ -6,7 +6,7 @@ Easy-to-understand instructions for spinning up a new machine with widely-used d
 
 ### Intro
 
-- Download the [Dev Setup repository](https://github.com/austintoddj/dev-setup)
+- Download the [Dev Setup repository](https://github.com/austintoddj/dev-setup/archive/master.zip)
 
 ### Fonts
 
