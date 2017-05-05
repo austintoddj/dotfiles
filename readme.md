@@ -24,6 +24,7 @@ Unzip the downloaded file and run `source init.sh` from inside.
 
 <br/>
 <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Resources/terminal.png" width=>
+
 ### Bash
 
 - Open Terminal > Settings and import the `Solarized Dark ansi.terminal` theme
@@ -32,6 +33,7 @@ Unzip the downloaded file and run `source init.sh` from inside.
 
 <br/>
 <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Resources/sublimetext.png">
+
 ### Sublime Text
 
 With the terminal, the text editor is a developer's most important tool. Everyone has their preferences, but unless you're a hardcore [Vim](http://en.wikipedia.org/wiki/Vim) user, a lot of people are going to tell you that [Sublime Text](http://www.sublimetext.com/) is currently the best one out there.
@@ -89,6 +91,7 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 
 <br/>
 <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Resources/phpstorm.png">
+
 ### PHPStorm
 
 - Install `Material Theme UI` in Settings > Preferences > Plugins > Browse Repositories
