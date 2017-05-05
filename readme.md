@@ -21,7 +21,6 @@ Easy-to-understand instructions for spinning up a new machine with widely-used d
 
 ### Sublime Text 2
 
-- Download Sublime repository from personal GitHub
 - Install the [Package Manager](https://packagecontrol.io/installation)
 - Install the `Material` package
 - Activate the theme in Preferences > Color Scheme > Material > schemes > Material-Theme
