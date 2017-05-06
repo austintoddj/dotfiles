@@ -45,7 +45,7 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
 # Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
+defaults write NSGlobalDomain KeyRepeat -int 5
 
 # Set a shorter delay until key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
@@ -94,7 +94,7 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 ###############################################################################
 
 # Set the icon size of Dock items to 36 pixels
-defaults write com.apple.dock tilesize -int 36
+defaults write com.apple.dock tilesize -int 30
 
 # Don’t animate opening applications from the Dock
 defaults write com.apple.dock launchanim -bool false
