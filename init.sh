@@ -31,6 +31,8 @@ done
 # General UI/UX                                                               #
 ###############################################################################
 
+echo -e "General UI/UX configuration..."
+
 # Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
 
@@ -40,6 +42,8 @@ defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
 ###############################################################################
+
+echo -e "Keyboard and inputs configuration..."
 
 # Disable press-and-hold for keys in favor of key repeat
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
@@ -54,12 +58,16 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 12
 # Screen                                                                      #
 ###############################################################################
 
+echo -e "Display and screen configuration..."
+
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
 
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
+
+echo -e "Finder options and configuration..."
 
 # Finder: disable window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
@@ -92,6 +100,8 @@ defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 ###############################################################################
 # Dock, Dashboard, and hot corners                                            #
 ###############################################################################
+
+echo -e "Dock, dashboard, and hot corners configuration..."
 
 # Set the icon size of Dock items to 36 pixels
 defaults write com.apple.dock tilesize -int 30
@@ -127,6 +137,8 @@ defaults write com.apple.dock wvous-tl-corner -int 2
 # Safari & WebKit                                                             #
 ###############################################################################
 
+echo -e "Safari and WebKit configuration..."
+
 # Set Safari’s home page to an empty page for faster loading
 defaults write com.apple.Safari HomePage -string ""
 
@@ -145,12 +157,17 @@ defaults write com.apple.Safari ShowStatusBar -boolean true
 # Terminal                                                                    #
 ###############################################################################
 
+echo -e "Terminal.app settings and configuration..."
+
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
 ###############################################################################
 # Time Machine                                                                #
 ###############################################################################
+
+echo -e "Time Machine configuration..."
+
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
@@ -158,17 +175,24 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 # TextEdit                                                                    #
 ###############################################################################
 
+echo -e "TextEdit default configuration..."
+
 # Use plain text mode for new TextEdit documents
 defaults write com.apple.TextEdit RichText -int 0
+
 # Open and save files as UTF-8 in TextEdit
 defaults write com.apple.TextEdit PlainTextEncoding -int 4
 defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
+
 # Set tab width to 4 instead of the default 8
 defaults write com.apple.TextEdit "TabWidth" '4'
 
 ###############################################################################
 # Kill all affected applications                                              #
 ###############################################################################
+
+echo -e "Resetting affected applications..."
+
 for app in "Finder" \
             "Safari" \
             "Dock"; do
@@ -178,5 +202,7 @@ done
 # Stop the timer
 end_time=$(date +%s)
 
+echo "------------------------------------------------"
 echo -e $COL_GREEN"✔ Finished in `expr $end_time - $start_time` seconds."$COL_RESET
 echo -e "Some of these changes required a logout/restart of your OS to take effect."
+echo "------------------------------------------------"

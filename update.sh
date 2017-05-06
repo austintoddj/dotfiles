@@ -30,4 +30,6 @@ done
 # Stop the timer
 end_time=$(date +%s)
 
+echo "------------------------------------------------"
 echo -e $COL_GREEN"✔ Finished in `expr $end_time - $start_time` seconds."$COL_RESET
+echo "------------------------------------------------"
