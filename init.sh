@@ -22,9 +22,9 @@ echo "------------------------------------------------"
 
 # Execute the base scripts
 SHELL_FILES=./Shell/*
-for f in $SHELL_FILES; do
-    filename=$(basename "$f")
-    ./$f
+for file in $SHELL_FILES; do
+    filename=$(basename "$file")
+    ./$file
 done
 
 ###############################################################################

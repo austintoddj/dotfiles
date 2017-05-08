@@ -42,19 +42,23 @@
 #   2. MAKE TERMINAL BETTER
 #   -----------------------------
 
+#   Easier Navigation
+#   ------------------------------------------
+    alias ..='cd ../'                           # ..: Go back 1 directory level
+    alias ...='cd ../../'                       # ...: Go back 2 directory levels
+    alias .3='cd ../../../'                     # .3: Go back 3 directory levels
+    alias .4='cd ../../../../'                  # .4: Go back 4 directory levels
+    alias .5='cd ../../../../../'               # .5: Go back 5 directory levels
+    alias .6='cd ../../../../../../'            # .6: Go back 6 directory levels
+    alias ~="cd ~"                              # ~: Go to the Home Directory
+    alias s="cd ~/Sites"                        # s: Go to the Sites Directory
+    alias dt="cd ~/Desktop"                     # dt: Go to the Desktop
+
     alias cp='cp -iv'                           # Preferred 'cp' implementation
     alias mv='mv -iv'                           # Preferred 'mv' implementation
-    alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
     alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
-    alias ..='cd ../'                           # Go back 1 directory level
-    alias ...='cd ../../'                       # Go back 2 directory levels
-    alias .3='cd ../../../'                     # Go back 3 directory levels
-    alias .4='cd ../../../../'                  # Go back 4 directory levels
-    alias .5='cd ../../../../../'               # Go back 5 directory levels
-    alias .6='cd ../../../../../../'            # Go back 6 directory levels
     alias edit='subl'                           # edit:         Opens any file in sublime editor
     alias f='open -a Finder ./'                 # f:            Opens current directory in macOS Finder
-    alias ~="cd ~"                              # ~:            Go Home
     alias c='clear'                             # c:            Clear terminal display
     alias which='type -all'                     # which:        Find executables
     alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
