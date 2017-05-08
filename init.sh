@@ -140,6 +140,7 @@ defaults write com.apple.dock wvous-tl-corner -int 2
 echo -e "Safari and WebKit configuration..."
 
 # Set Safari’s home page to an empty page for faster loading
+# Currently not working in macOS Sierra
 defaults write com.apple.Safari HomePage -string ""
 
 # Prevent Safari from opening ‘safe’ files automatically after downloading
