@@ -38,10 +38,10 @@ Unzip the downloaded file and run `source init.sh` from inside.
 
 With the terminal, the text editor is a developer's most important tool. Everyone has their preferences, but unless you're a hardcore [Vim](http://en.wikipedia.org/wiki/Vim) user, a lot of people are going to tell you that [Sublime Text](http://www.sublimetext.com/) is currently the best one out there.
 
-#### v2
+#### [v2](https://www.sublimetext.com/2)
 
 - Install the [Package Manager](https://packagecontrol.io/installation)
-- Install the Sublime Text > v2 > `Material` theme in Packages/Themes/Material/Material-Theme.tmTheme
+- Install the *Sublime Text > v2 > `Material` theme in Packages/Themes/Material/Material-Theme.tmTheme*
 - Replace the contents of `Preferences.sublime-settings`, `Distraction Free.sublime-settings`
 - Install the following packages:
     - AutoFileName
@@ -63,10 +63,10 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 - Restart Sublime
 - Enter License Key
 
-#### v3
+#### [v3](https://www.sublimetext.com/3)
 
 - Install the [Package Manager](https://packagecontrol.io/installation)
-- Install the Sublime Text > v3 > `Material` theme in Packages/Material Theme/schemes/Material-Theme.tmTheme
+- Install the *Sublime Text > v3 > `Material` theme in Packages/Material Theme/schemes/Material-Theme.tmTheme*
 - Replace the contents of `Preferences.sublime-settings`, `Distraction Free.sublime-settings`
 - Install the following packages:
     - AutoFileName
