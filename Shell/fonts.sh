@@ -2,4 +2,4 @@
 
 echo -e "Installing fonts..."
 
-cp -R Fonts/Source\ Code\ Pro/ ~/Library/Fonts/
+cp -R fonts/Source\ Code\ Pro/ ~/Library/Fonts/

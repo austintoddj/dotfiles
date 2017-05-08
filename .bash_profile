@@ -63,17 +63,20 @@
     alias which='type -all'                     # which:        Find executables
     alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
     alias show_options='shopt'                  # Show_options: Display bash options settings
+    alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
+    alias gits='git status'                     # gits:         Check the status of a Git initialized repository
+
     md() { mkdir -p "$@" && cd "$@" ; }         # Make a directory and enter it
     rd() { rm -rf "$@" ; }                      # Remove a directory and its files
     trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
-    alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
 
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
     alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 
 #   mans:   Search manpage given in agument '1' for term given in argument '2' (case insensitive)
-#           Displays paginated result with colored search terms and two lines surrounding each hit.            Example: mans mplayer codec
+#           Displays paginated result with colored search terms and two lines surrounding each hit.
+#           Example: mans mplayer codec
 #   --------------------------------------------------------------------
     mans () {
         man $1 | grep -iC2 --color=always $2 | less
@@ -183,10 +186,10 @@
 #   ------------------------------------------------------------
     my_ps() { ps $@ -u $USER -o pid,%cpu,%mem,start,time,bsdtime,command ; }
 
-
 #   ---------------------------
 #   6. NETWORKING
 #   ---------------------------
+
     alias myip='curl ipecho.net/plain; echo'           	# myip:         Public facing IP Address
     alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
     alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
@@ -211,7 +214,6 @@
         #echo -e "\n${RED}DNS Configuration:$NC " ; scutil --dns
         echo
     }
-
 
 #   ---------------------------------------
 #   7. SYSTEMS OPERATIONS & INFORMATION

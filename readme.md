@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Resources/header.jpg">
+    <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/resources/header.jpg">
 </p>
 
 Easy-to-understand instructions with automated setup scripts for developer tools like **Vim**, **Sublime Text**, **Bash**, **PHPStorm**, **Git**, and dev-based macOS defaults.
@@ -23,7 +23,7 @@ git clone https://github.com/austintoddj/dev-setup.git && cd dev-setup && source
 Unzip the downloaded file and run `source init.sh` from inside.
 
 <br/>
-<img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Resources/terminal.png" width=>
+<img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/resources/terminal.png" width=>
 
 ### Bash
 
@@ -32,7 +32,7 @@ Unzip the downloaded file and run `source init.sh` from inside.
 - Restart Terminal
 
 <br/>
-<img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Resources/sublimetext.png">
+<img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/resources/sublimetext.png">
 
 ### Sublime Text
 
@@ -43,23 +43,7 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 - Install the [Package Manager](https://packagecontrol.io/installation)
 - Install the *Sublime Text > v2 > `Material` theme in Packages/Themes/Material/Material-Theme.tmTheme*
 - Replace the contents of `Preferences.sublime-settings`, `Distraction Free.sublime-settings`
-- Install the following packages:
-    - AutoFileName
-    - Autoprefixer
-    - Blade Snippets
-    - Blade Spacer
-    - BracketHighlighter
-    - Colorsublime-Themes
-    - Emmet
-    - FuzzyFileNav
-    - FuzzyFilePath
-    - Laravel Blade Highlighter
-    - Package Control
-    - PhpDoc
-    - Predawn
-    - PyV8
-    - SideBarEnhancements
-    - SublimeCodeIntel
+- Install useful packages referenced in `sublime/packages`
 - Restart Sublime
 - Enter License Key
 
@@ -68,37 +52,18 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 - Install the [Package Manager](https://packagecontrol.io/installation)
 - Install the *Sublime Text > v3 > `Material` theme in Packages/Material Theme/schemes/Material-Theme.tmTheme*
 - Replace the contents of `Preferences.sublime-settings`, `Distraction Free.sublime-settings`
-- Install the following packages:
-    - AutoFileName
-    - Autoprefixer
-    - Blade Snippets
-    - Blade Spacer
-    - BracketHighlighter
-    - Colorsublime-Themes
-    - Emmet
-    - FuzzyFileNav
-    - FuzzyFilePath
-    - Laravel Blade Highlighter
-    - Package Control
-    - PhpDoc
-    - Predawn
-    - PyV8
-    - SideBarEnhancements
-    - SublimeCodeIntel
+- Install useful packages referenced in `sublime/packages`
 - Restart Sublime
 - Enter License Key
 
 <br/>
-<img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/Resources/phpstorm.png">
+<img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/resources/phpstorm.png">
 
 ### PHPStorm
 
 - Install `Material Theme UI` in Settings > Preferences > Plugins > Browse Repositories
 - Restart PHPStorm
 - IDE theme (not the code color scheme) can be changed in Tools > Material Theme
-- Install the following plugins:
-    - CodeGlance
-    - Laravel Plugin
-    - Material Theme UI
+- Install useful packages referenced in `phpstorm/packages`
 - Enter License Key
 

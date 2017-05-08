@@ -21,7 +21,7 @@ echo "----------------------------------------------"
 ###############################################################################
 
 # Execute the base scripts
-SHELL_FILES=./Shell/*
+SHELL_FILES=./shell/*
 for f in $SHELL_FILES; do
     filename=$(basename "$f")
     ./$f

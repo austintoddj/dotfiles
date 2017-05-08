@@ -53,7 +53,7 @@ set ignorecase
 " Highlight dynamically as pattern is typed
 set incsearch
 " Enable mouse in all modes
-set mouse=a
+"set mouse=a
 " Disable error bells
 set noerrorbells
 " Don’t reset cursor to start of line when moving around.
