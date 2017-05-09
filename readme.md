@@ -4,23 +4,25 @@
 
 Easy-to-understand instructions with automated setup scripts for developer tools like **Vim**, **Sublime Text**, **Bash**, **PHPStorm**, **Git**, and dev-based macOS defaults.
 
-### Installation
-
 **Warning:** If you want to give these scripts a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what they entail. *Use at your own risk!*
 
-#### Git Installation
+### Installation
 
-You can clone the repository wherever you want. I like to keep it in `~/Sites/dev-setup`. You can then use `git pull` to keep your working copy up to date with the repository and the script will then copy the files to your home folder.
+#### Option 1
+
+You can clone the repository wherever you want. Run the following command to download the files and initiate the installer:
 
 ```sh
 git clone https://github.com/austintoddj/dev-setup.git && cd dev-setup && source init.sh
 ```
 
-#### Git-free Installation
+To remain up-to-date with any future changes, simply run `git pull` from the project to update your working copy, and then run `source update.sh`. The update script only runs the files within the `shell/` directory since there isn't any need to run the default configuration commands again.
 
-[Click here](https://github.com/austintoddj/dev-setup/archive/master.zip) to download the repository.
+#### Option 2
 
-Unzip the downloaded file and run `source init.sh` from inside.
+If you prefer to not use Git, or simply don't have it installed on your machine, [click here](https://github.com/austintoddj/dev-setup/archive/master.zip) to download the project. Unzip the downloaded file and run `source init.sh` from inside.
+
+To remain up-to-date with any future changes, just [click here](https://github.com/austintoddj/dev-setup/archive/master.zip) to re-download the project. Unzip the downloaded file and run `source update.sh` from the inside. The update script only runs the files within the `shell/` directory since there isn't any need to run the default configuration commands again.
 
 <br/>
 <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/resources/terminal.png" width=>
