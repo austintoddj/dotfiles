@@ -248,7 +248,7 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   8. WEB DEVELOPMENT
 #   ---------------------------------------
 
-    alias wipe='php artisan view:clear;php artisan cache:clear;php artisan config:clear;composer dumpautoload'
+    alias wipe='php artisan view:clear;php artisan cache:clear;php artisan config:clear;php artisan route:clear;composer dumpautoload'
     alias gp='gulp --production'                            # gp:               Run Gulp --production (Laravel)
     alias clearLog='> ./storage/logs/laravel.log'           # clearLog:         Clear the log (Laravel)
     alias viewLog='cat ./storage/logs/laravel.log'          # viewLog:          View the log (Laravel)
