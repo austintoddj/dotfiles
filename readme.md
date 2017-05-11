@@ -68,4 +68,3 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 - IDE theme (not the code color scheme) can be changed in Tools > Material Theme
 - Install useful packages referenced in `phpstorm/packages`
 - Enter License Key
-

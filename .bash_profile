@@ -53,15 +53,15 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 
 #   Easier Navigation
 #   ------------------------------------------
-    alias ..='cd ../'                           # ..: Go back 1 directory level
-    alias ...='cd ../../'                       # ...: Go back 2 directory levels
-    alias .3='cd ../../../'                     # .3: Go back 3 directory levels
-    alias .4='cd ../../../../'                  # .4: Go back 4 directory levels
-    alias .5='cd ../../../../../'               # .5: Go back 5 directory levels
-    alias .6='cd ../../../../../../'            # .6: Go back 6 directory levels
-    alias ~="cd ~"                              # ~: Go to the Home Directory
-    alias s="cd ~/Sites"                        # s: Go to the Sites Directory
-    alias dt="cd ~/Desktop"                     # dt: Go to the Desktop
+    alias ..='cd ../'                           # ..:   Go back 1 directory level
+    alias ...='cd ../../'                       # ...:  Go back 2 directory levels
+    alias .3='cd ../../../'                     # .3:   Go back 3 directory levels
+    alias .4='cd ../../../../'                  # .4:   Go back 4 directory levels
+    alias .5='cd ../../../../../'               # .5:   Go back 5 directory levels
+    alias .6='cd ../../../../../../'            # .6:   Go back 6 directory levels
+    alias ~="cd ~"                              # ~:    Go to the Home Directory
+    alias s="cd ~/Sites"                        # s:    Go to the Sites Directory
+    alias dt="cd ~/Desktop"                     # dt:   Go to the Desktop
 
     alias cp='cp -iv'                           # Preferred 'cp' implementation
     alias mv='mv -iv'                           # Preferred 'mv' implementation
@@ -71,13 +71,13 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     alias c='clear'                             # c:            Clear terminal display
     alias which='type -all'                     # which:        Find executables
     alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
-    alias show_options='shopt'                  # Show_options: Display bash options settings
+    alias show_options='shopt'                  # show_options: Display bash options settings
     alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
     alias gits='git status'                     # gits:         Check the status of a Git initialized repository
 
+    trash () { command mv "$@" ~/.Trash ; }     # trash:    Moves a file to the MacOS trash
     md() { mkdir -p "$@" && cd "$@" ; }         # Make a directory and enter it
     rd() { rm -rf "$@" ; }                      # Remove a directory and its files
-    trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
