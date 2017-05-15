@@ -144,7 +144,6 @@ COL_RESET=$ESC_SEQ"39;49;00m"
          fi
     }
 
-
 #   ---------------------------
 #   4. SEARCHING
 #   ---------------------------
@@ -157,7 +156,6 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   spotlight: Search for a file using MacOS Spotlight's metadata
 #   -----------------------------------------------------------
     spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
-
 
 #   ---------------------------
 #   5. PROCESS MANAGEMENT
