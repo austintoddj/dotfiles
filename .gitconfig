@@ -104,9 +104,7 @@
 
 [color "branch"]
 
-    current = yellow reverse
-    local = yellow
-    remote = green
+    current = green
 
 [color "diff"]
 
@@ -117,9 +115,9 @@
 
 [color "status"]
 
-    added = yellow
-    changed = green
-    untracked = cyan
+    added = green
+    changed = yellow
+    untracked = red
 
 [diff]
 
