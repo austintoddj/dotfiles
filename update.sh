@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Set the timer
-start_time=$(date +%s)
+START_TIME=$(date +%s)
 
 # Define color variables for output
 ESC_SEQ="\x1b["
@@ -20,6 +20,17 @@ echo "----------------------------------------------"
 # Shell Scripts                                                               #
 ###############################################################################
 
+# Back up files before replacement
+mkdir -pv ~/.dev-backups
+
+cp -rf ~/.bashrc ~/.dev-backups/.bashrc
+cp -rf ~/.bash_profile ~/.dev-backups/.bash_profile
+cp -rf ~/.gitignore ~/.dev-backups/.gitignore
+cp -rf ~/.gitconfig ~/.dev-backups/.gitconfig
+cp -rf ~/.git-prompt.sh ~/.dev-backups/.git-prompt.sh
+cp -r ~/.vim ~/.dev-backups/.vim
+cp -rf ~/.vimrc ~/.dev-backups/.vimrc
+
 # Execute the base scripts
 SHELL_FILES=./shell/*
 for f in $SHELL_FILES; do
@@ -27,9 +38,13 @@ for f in $SHELL_FILES; do
     ./$f
 done
 
+echo ""
+echo -e "File backups have been created and can be accessed at $COL_YELLOW~/.dev-backups$COL_RESET"
+echo ""
+
 # Stop the timer
-end_time=$(date +%s)
+END_TIME=$(date +%s)
 
 echo "------------------------------------------------"
-echo -e $COL_GREEN"✔ Finished.$COL_RESET (`expr $end_time - $start_time`s)"
+echo -e $COL_GREEN"✔ Finished.$COL_RESET (`expr $END_TIME - $START_TIME`s)"
 echo "------------------------------------------------"
