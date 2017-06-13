@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Set the timer
-start_time=$(date +%s)
+START_TIME=$(date +%s)
 
 # Define color variables for output
 ESC_SEQ="\x1b["
@@ -40,8 +40,8 @@ echo -e "General UI/UX configuration..."
 defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
 # Always show scrollbars
-#defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
+#defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -143,7 +143,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`, `Nlsv`
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
 
-# Show the ~/Library folder
+# Show the ~/Library folder by default
 chflags nohidden ~/Library
 
 # Expand the following File Info panes:
@@ -159,7 +159,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 
 echo -e "Dock, dashboard, and hot corners configuration..."
 
-# Set the icon size of Dock items to 36 pixels
+# Set the icon size of Dock items to 30 pixels
 defaults write com.apple.dock tilesize -int 30
 
 # Don’t animate opening applications from the Dock
@@ -201,7 +201,7 @@ defaults write com.apple.dock wvous-tl-corner -int 2
 
 echo -e "Safari and WebKit configuration..."
 
-# Privacy: don’t send search queries to Apple
+# Prevent search queries from being to Apple
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
 defaults write com.apple.Safari SuppressSearchSuggestions -bool true
 
@@ -273,9 +273,9 @@ for app in "Finder" \
 done
 
 # Stop the timer
-end_time=$(date +%s)
+END_TIME=$(date +%s)
 
 echo "------------------------------------------------"
-echo -e $COL_GREEN"✔ Finished.$COL_RESET (`expr $end_time - $start_time`s)"
+echo -e $COL_GREEN"✔ Finished.$COL_RESET (`expr $END_TIME - $START_TIME`s)"
 echo -e "Some of these changes required a logout/restart of your OS to take effect."
 echo "------------------------------------------------"
