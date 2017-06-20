@@ -23,13 +23,13 @@ echo "----------------------------------------------"
 # Back up files before replacement
 mkdir -pv ~/.dev-backups
 
-cp -rf ~/.bashrc ~/.dev-backups/.bashrc
-cp -rf ~/.bash_profile ~/.dev-backups/.bash_profile
-cp -rf ~/.gitignore ~/.dev-backups/.gitignore
-cp -rf ~/.gitconfig ~/.dev-backups/.gitconfig
-cp -rf ~/.git-prompt.sh ~/.dev-backups/.git-prompt.sh
 cp -r ~/.vim ~/.dev-backups/.vim
 cp -rf ~/.vimrc ~/.dev-backups/.vimrc
+cp -rf ~/.bashrc ~/.dev-backups/.bashrc
+cp -rf ~/.gitconfig ~/.dev-backups/.gitconfig
+cp -rf ~/.gitignore ~/.dev-backups/.gitignore
+cp -rf ~/.bash_profile ~/.dev-backups/.bash_profile
+cp -rf ~/.git-prompt.sh ~/.dev-backups/.git-prompt.sh
 
 # Execute the base scripts
 SHELL_FILES=./shell/*

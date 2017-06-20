@@ -20,6 +20,17 @@ echo "------------------------------------------------"
 # Shell Scripts                                                               #
 ###############################################################################
 
+# Back up files before replacement
+mkdir -pv ~/.dev-backups
+
+cp -r ~/.vim ~/.dev-backups/.vim
+cp -rf ~/.vimrc ~/.dev-backups/.vimrc
+cp -rf ~/.bashrc ~/.dev-backups/.bashrc
+cp -rf ~/.gitconfig ~/.dev-backups/.gitconfig
+cp -rf ~/.gitignore ~/.dev-backups/.gitignore
+cp -rf ~/.bash_profile ~/.dev-backups/.bash_profile
+cp -rf ~/.git-prompt.sh ~/.dev-backups/.git-prompt.sh
+
 # Execute the base scripts
 SHELL_FILES=./shell/*
 for file in $SHELL_FILES; do
@@ -271,6 +282,10 @@ for app in "Finder" \
             "Dock"; do
     killall "${app}" > /dev/null 2>&1
 done
+
+echo ""
+echo -e "File backups have been created and can be accessed at $COL_YELLOW~/.dev-backups$COL_RESET"
+echo ""
 
 # Stop the timer
 END_TIME=$(date +%s)
