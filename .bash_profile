@@ -212,7 +212,7 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   -------------------------------------------------------------------
     ii() {
         echo -e "\n${COL_GREEN}You are currently logged in to:$COL_RESET " ; echo -e $HOSTNAME
-        echo -e "\n${COL_GREEN}Additionnal information:$COL_RESET $NC " ; uname -a
+        echo -e "\n${COL_GREEN}Additional information:$COL_RESET $NC " ; uname -a
         echo -e "\n${COL_GREEN}Users logged on:$COL_RESET $NC " ; w -h
         echo -e "\n${COL_GREEN}Current date:$COL_RESET $NC " ; date
         echo -e "\n${COL_GREEN}Machine stats:$COL_RESET $NC " ; uptime
