@@ -28,6 +28,10 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   1. ENVIRONMENT CONFIGURATION
 #   -------------------------------
 
+#   Set Paths
+#   ------------------------------------------------------------
+    export PATH=~/.composer/vendor/bin:$PATH
+
 #   Change Prompt
 #   ------------------------------------------------------------
     source ~/.git-prompt.sh
