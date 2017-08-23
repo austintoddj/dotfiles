@@ -3,15 +3,16 @@
 #  Description:  This file holds all my BASH configurations and aliases
 #
 #  Sections:
-#  1.  Environment Configuration
-#  2.  Make Terminal Better (remapping defaults and adding functionality)
-#  3.  File and Folder Management
-#  4.  Searching
-#  5.  Process Management
-#  6.  Networking
-#  7.  System Operations & Information
-#  8.  Web Development
-#  9.  Reminders & Notes
+#  1.   Environment Configuration
+#  2.   Make Terminal Better (remapping defaults and adding functionality)
+#  3.   File and Folder Management
+#  4.   Searching
+#  5.   Process Management
+#  6.   Networking
+#  7.   System Operations & Information
+#  8.   Web Development
+#  9.   Security
+#  10.  Reminders & Notes
 #
 #  ---------------------------------------------------------------------------
 
@@ -28,26 +29,26 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   1. ENVIRONMENT CONFIGURATION
 #   -------------------------------
 
-#   Set Paths
-#   ------------------------------------------------------------
+    #   Set Paths
+    #   ------------------------------------------------------------
     export PATH=~/.composer/vendor/bin:$PATH
 
-#   Change Prompt
-#   ------------------------------------------------------------
+    #   Change Prompt
+    #   ------------------------------------------------------------
     source ~/.git-prompt.sh
     export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[01;31m\]$(__git_ps1 "(%s)")\[\033[00m\]\$ '
 
-#   Set Default Editor (change 'Vim' to the editor of your choice)
-#   ------------------------------------------------------------
+    #   Set Default Editor (change 'Vim' to the editor of your choice)
+    #   ------------------------------------------------------------
     export EDITOR=/usr/bin/vim
 
-#   Set default blocksize for ls, df, du
-#   from this: http://hints.macworld.com/comment.php?mode=view&cid=24491
-#   ------------------------------------------------------------
+    #   Set default blocksize for ls, df, du
+    #   from this: http://hints.macworld.com/comment.php?mode=view&cid=24491
+    #   ------------------------------------------------------------
     export BLOCKSIZE=1k
 
-#   Set Colors
-#   ------------------------------------------------------------
+    #   Set Colors
+    #   ------------------------------------------------------------
     export CLICOLOR=1
     export LSCOLORS=GxFxCxDxBxegedabagaced
 
@@ -55,8 +56,8 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   2. MAKE TERMINAL BETTER
 #   -----------------------------
 
-#   Easier Navigation
-#   ------------------------------------------
+    #   Easier Navigation
+    #   ------------------------------------------
     alias ..='cd ../'                           # ..:   Go back 1 directory level
     alias ...='cd ../../'                       # ...:  Go back 2 directory levels
     alias .3='cd ../../../'                     # .3:   Go back 3 directory levels
@@ -83,24 +84,24 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     md() { mkdir -p "$@" && cd "$@" ; }         # Make a directory and enter it
     rd() { rm -rf "$@" ; }                      # Remove a directory and its files
 
-#   lr:  Full Recursive Directory Listing
-#   ------------------------------------------
+    #   lr:  Full Recursive Directory Listing
+    #   ------------------------------------------
     alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 
-#   mans:   Search manpage given in agument '1' for term given in argument '2' (case insensitive)
-#           Displays paginated result with colored search terms and two lines surrounding each hit.
-#           Example: mans mplayer codec
-#   --------------------------------------------------------------------
+    #   mans:   Search manpage given in agument '1' for term given in argument '2' (case insensitive)
+    #           Displays paginated result with colored search terms and two lines surrounding each hit.
+    #           Example: mans mplayer codec
+    #   --------------------------------------------------------------------
     mans () {
         man $1 | grep -iC2 --color=always $2 | less
     }
 
-#   showa: To remind yourself of an alias (given some part of it)
-#   ------------------------------------------------------------
+    #   showa: To remind yourself of an alias (given some part of it)
+    #   ------------------------------------------------------------
     showa () { /usr/bin/grep --color=always -i -a1 $@ ~/Library/init/bash/aliases.bash | grep -v '^\s*$' | less -FSRXc ; }
 
-#   calc:  Simple calculator
-#   ---------------------------------------------------------
+    #   calc:  Simple calculator
+    #   ---------------------------------------------------------
     function calc() {
         local result="";
         result="$(printf "scale=10;$*\n" | bc --mathlib | tr -d '\\\n')";
@@ -125,8 +126,8 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     zipf () { zip -r "$1".zip "$1" ; }          # zipf:         To create a ZIP archive of a folder
     alias numFiles='echo $(ls -1 | wc -l)'      # numFiles:     Count of non-hidden files in current dir
 
-#   extract:  Extract most know archives with one command
-#   ---------------------------------------------------------
+    #   extract:  Extract most know archives with one command
+    #   ---------------------------------------------------------
     extract () {
         if [ -f $1 ] ; then
           case $1 in
@@ -157,44 +158,44 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     ffs () { /usr/bin/find . -name "$@"'*' ; }  # ffs:      Find file whose name starts with a given string
     ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name ends with a given string
 
-#   spotlight: Search for a file using MacOS Spotlight's metadata
-#   -----------------------------------------------------------
+    #   spotlight: Search for a file using MacOS Spotlight's metadata
+    #   -----------------------------------------------------------
     spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
 
 #   ---------------------------
 #   5. PROCESS MANAGEMENT
 #   ---------------------------
 
-#   findPid: Find out the pid of a specified process
-#   -----------------------------------------------------
-#       Note that the command name can be specified via a regex
-#       E.g. findPid '/d$/' finds pids of all processes with names ending in 'd'
-#       Without the 'sudo' it will only find processes of the current user
-#   -----------------------------------------------------
+    #   findPid: Find out the pid of a specified process
+    #   -----------------------------------------------------
+    #       Note that the command name can be specified via a regex
+    #       E.g. findPid '/d$/' finds pids of all processes with names ending in 'd'
+    #       Without the 'sudo' it will only find processes of the current user
+    #   -----------------------------------------------------
     findPid () { lsof -t -c "$@" ; }
 
-#   memHogsTop, memHogsPs:  Find memory hogs
-#   -----------------------------------------------------
+    #   memHogsTop, memHogsPs:  Find memory hogs
+    #   -----------------------------------------------------
     alias memHogsTop='top -l 1 -o rsize | head -20'
     alias memHogsPs='ps wwaxm -o pid,stat,vsize,rss,time,command | head -10'
 
-#   cpuHogs:  Find CPU hogs
-#   -----------------------------------------------------
+    #   cpuHogs:  Find CPU hogs
+    #   -----------------------------------------------------
     alias cpu_hogs='ps wwaxr -o pid,stat,%cpu,time,command | head -10'
 
-#   topForever:  Continual 'top' listing (every 10 seconds)
-#   -----------------------------------------------------
+    #   topForever:  Continual 'top' listing (every 10 seconds)
+    #   -----------------------------------------------------
     alias topForever='top -l 9999999 -s 10 -o cpu'
 
-#   ttop:  Recommended 'top' invocation to minimize resources
-#   ------------------------------------------------------------
-#       Taken from this macosxhints article
-#       http://www.macosxhints.com/article.php?story=20060816123853639
-#   ------------------------------------------------------------
+    #   ttop:  Recommended 'top' invocation to minimize resources
+    #   ------------------------------------------------------------
+    #       Taken from this macosxhints article
+    #       http://www.macosxhints.com/article.php?story=20060816123853639
+    #   ------------------------------------------------------------
     alias ttop="top -R -F -s 10 -o rsize"
 
-#   my_ps: List processes owned by my user:
-#   ------------------------------------------------------------
+    #   my_ps: List processes owned by my user:
+    #   ------------------------------------------------------------
     my_ps() { ps $@ -u $USER -o pid,%cpu,%mem,start,time,bsdtime,command ; }
 
 #   ---------------------------
@@ -212,8 +213,8 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
     alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
 
-#   ii:  display useful host related informaton
-#   -------------------------------------------------------------------
+    #   ii:  display useful host related informaton
+    #   -------------------------------------------------------------------
     ii() {
         echo -e "\n${COL_GREEN}You are currently logged in to:$COL_RESET " ; echo -e $HOSTNAME
         echo -e "\n${COL_GREEN}Additional information:$COL_RESET $NC " ; uname -a
@@ -232,43 +233,63 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 
     alias mountReadWrite='/sbin/mount -uw /'    # mountReadWrite:   For use when booted into single-user
 
-#   cleanupDS:  Recursively delete .DS_Store files
-#   -------------------------------------------------------------------
+    #   cleanupDS:  Recursively delete .DS_Store files
+    #   -------------------------------------------------------------------
     alias cleanupDS="find . -type f -name '*.DS_Store' -ls -delete"
 
-#   finderShowHidden:   Show hidden files in Finder
-#   finderHideHidden:   Hide hidden files in Finder
-#   -------------------------------------------------------------------
+    #   finderShowHidden:   Show hidden files in Finder
+    #   finderHideHidden:   Hide hidden files in Finder
+    #   -------------------------------------------------------------------
     alias finderShowHidden='defaults write com.apple.finder ShowAllFiles TRUE'
     alias finderHideHidden='defaults write com.apple.finder ShowAllFiles FALSE'
 
-#   cleanupLS:  Clean up LaunchServices to remove duplicates in the "Open With" menu
-#   -----------------------------------------------------------------------------------
+    #   cleanupLS:  Clean up LaunchServices to remove duplicates in the "Open With" menu
+    #   -----------------------------------------------------------------------------------
     alias cleanupLS="/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user && killall Finder"
 
 #   ---------------------------------------
 #   8. WEB DEVELOPMENT
 #   ---------------------------------------
 
-    alias wipe='php artisan view:clear;php artisan cache:clear;php artisan config:clear;php artisan route:clear;composer dumpautoload'
-    alias gp='gulp --production'                            # gp:               Run Gulp --production (Laravel)
+    #   Laravel Framework
+    #   -------------------------------------------------------------------
+    alias wipe='php artisan clear-compiled;php artisan optimize;php artisan view:clear;php artisan cache:clear;php artisan config:clear;php artisan route:clear;composer dumpautoload'
     alias clearLog='> ./storage/logs/laravel.log'           # clearLog:         Clear the log (Laravel)
     alias viewLog='cat ./storage/logs/laravel.log'          # viewLog:          View the log (Laravel)
+
+    #   Gulp
+    #   -------------------------------------------------------------------
+    alias gp='gulp --production'                            # gp:               Run Gulp --production (Laravel)
+
+    #   PHPUnit
+    #   -------------------------------------------------------------------
     alias pu='vendor/bin/phpunit'                           # pu:               Run PHPUnit from current directory (Laravel)
+
+    #   Apache Web Server
+    #   -------------------------------------------------------------------
     alias apacheEdit='sudo edit /etc/httpd/httpd.conf'      # apacheEdit:       Edit httpd.conf
     alias apacheRestart='sudo apachectl graceful'           # apacheRestart:    Restart Apache
-    alias editHosts='sudo edit /etc/hosts'                  # editHosts:        Edit /etc/hosts file
-    alias herr='tail /var/log/httpd/error_log'              # herr:             Tails HTTP error logs
     alias apacheLogs="less +F /var/log/apache2/error_log"   # Apachelogs:       Shows apache error logs
+    alias herr='tail /var/log/httpd/error_log'              # herr:             Tails HTTP error logs
+
+    #   Miscellaneous
+    #   -------------------------------------------------------------------
     httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grabs headers from web page
+    alias editHosts='sudo edit /etc/hosts'                  # editHosts:        Edit /etc/hosts file
     alias record='asciinema rec'                            # record:           Record a Terminal Session with Asciinema
 
-#   httpDebug:  Download a web page and show info on what took time
-#   -------------------------------------------------------------------
+    #   httpDebug:  Download a web page and show info on what took time
+    #   -------------------------------------------------------------------
     httpDebug () { /usr/bin/curl $@ -o /dev/null -w "dns: %{time_namelookup} connect: %{time_connect} pretransfer: %{time_pretransfer} starttransfer: %{time_starttransfer} total: %{time_total}\n" ; }
 
 #   ---------------------------------------
-#   9. REMINDERS & NOTES
+#   9. SECURITY
+#   ---------------------------------------
+
+    alias ghost='sudo chkrootkit;sudo rkhunter --update;sudo rkhunter --propupd;sudo rkhunter --check;' # ghost: Run RKHunter/CHKRootKit to verify Ubuntu 16.04 server has not been compromised (https://www.thefanclub.co.za/how-to/how-secure-ubuntu-1604-lts-server-part-1-basics)
+
+#   ---------------------------------------
+#   10. REMINDERS & NOTES
 #   ---------------------------------------
 
 #   remove_disk: Spin down unneeded disk
