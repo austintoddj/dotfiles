@@ -11,7 +11,7 @@
 #  6.   Networking
 #  7.   System Operations & Information
 #  8.   Web Development
-#  9.   Security
+#  9.   Server Security & Cleanup
 #  10.  Reminders & Notes
 #
 #  ---------------------------------------------------------------------------
@@ -283,10 +283,16 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     httpDebug () { /usr/bin/curl $@ -o /dev/null -w "dns: %{time_namelookup} connect: %{time_connect} pretransfer: %{time_pretransfer} starttransfer: %{time_starttransfer} total: %{time_total}\n" ; }
 
 #   ---------------------------------------
-#   9. SECURITY
+#   9. Server Security & Cleanup
 #   ---------------------------------------
 
-    alias ghost='sudo chkrootkit;sudo rkhunter --update;sudo rkhunter --propupd;sudo rkhunter --check;' # ghost: Run RKHunter/CHKRootKit to verify Ubuntu 16.04 server has not been compromised (https://www.thefanclub.co.za/how-to/how-secure-ubuntu-1604-lts-server-part-1-basics)
+    #   ghost: Run RKHunter/CHKRootKit to verify Ubuntu 16.04 server has not been compromised (https://www.thefanclub.co.za/how-to/how-secure-ubuntu-1604-lts-server-part-1-basics)
+    #   -----------------------------------------------------------
+    alias ghost='sudo chkrootkit;sudo rkhunter --update;sudo rkhunter --propupd;sudo rkhunter --check;'
+
+    #   cleanup: Package cleanup and removal on Ubuntu server
+    #   -----------------------------------------------------------
+    alias cleanup='sudo apt-get clean;sudo apt-get autoclean -y; sudo apt-get autoremove -y;'
 
 #   ---------------------------------------
 #   10. REMINDERS & NOTES
