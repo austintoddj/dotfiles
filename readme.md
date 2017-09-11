@@ -8,7 +8,7 @@ This repository contains automated setup scripts for my preferred tools and dev-
 
 > **Warning:** If you want to give these scripts a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what they entail. *Use at your own risk!*
 
-## Sections
+## Chapters
 
 * Installation
     * [Option 1](#option-1)
@@ -38,9 +38,6 @@ If you prefer to not use Git, or simply don't have it installed on your machine,
 
 To remain up-to-date with any future changes, just [click here](https://github.com/austintoddj/dev-setup/archive/master.zip) to re-download the project. Unzip the downloaded file and run `source update.sh` from the inside. The update script only runs the files within the `shell/` directory since there isn't any need to run the default configuration commands again.
 
-<br/>
-<img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/resources/terminal.png" width=>
-
 ## Tools
 
 ### Bash
@@ -49,14 +46,11 @@ To remain up-to-date with any future changes, just [click here](https://github.c
 - Update Font/Cursor/Startup as needed
 - Restart Terminal
 
-<br/>
-<img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/resources/sublimetext.png">
-
 ### Sublime Text
 
 Along with the terminal, the text editor is a developer's most important tool. Everyone has their preferences, but unless you're a hardcore [Vim](http://en.wikipedia.org/wiki/Vim) user, a lot of people are going to tell you that [Sublime Text](http://www.sublimetext.com/) is currently the best one out there.
 
-#### [v2](https://www.sublimetext.com/2)
+#### [V2](https://www.sublimetext.com/2)
 
 - Install the [Package Manager](https://packagecontrol.io/installation)
 - Install the *Sublime Text > v2 > `Material` theme in Packages/Themes/Material/Material-Theme.tmTheme*
@@ -65,7 +59,7 @@ Along with the terminal, the text editor is a developer's most important tool. E
 - Restart Sublime
 - Enter License Key
 
-#### [v3](https://www.sublimetext.com/3)
+#### [V3](https://www.sublimetext.com/3)
 
 - Install the [Package Manager](https://packagecontrol.io/installation)
 - Install the *Sublime Text > v3 > `Material` theme in Packages/Material Theme/schemes/Material-Theme.tmTheme*
@@ -73,9 +67,6 @@ Along with the terminal, the text editor is a developer's most important tool. E
 - Install useful packages referenced in `sublime/packages`
 - Restart Sublime
 - Enter License Key
-
-<br/>
-<img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/resources/phpstorm.png">
 
 ### PHPStorm
 
