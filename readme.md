@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/resources/header.jpg">
+    <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/resources/header.jpg">
 </p>
 
 Easy-to-understand instructions with automated setup scripts for developer tools like **Vim**, **Sublime Text**, **Bash**, **PHPStorm**, **Git**, and dev-based macOS defaults.
