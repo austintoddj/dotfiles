@@ -2,13 +2,25 @@
     <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/resources/header.jpg">
 </p>
 
-Easy-to-understand instructions with automated setup scripts for developer tools like **Vim**, **Sublime Text**, **Bash**, **PHPStorm**, **Git**, and dev-based macOS defaults.
+I've always enjoyed watching developers work. Which editor do they use? Do they prefer Terminal or iTerm? Are they using a virtual machine? If only in small pieces, I've learned from every developer I've ever worked with.
+
+This repository contains automated setup scripts for my preferred tools and dev-based macOS defaults.
 
 > **Warning:** If you want to give these scripts a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what they entail. *Use at your own risk!*
 
-### Installation
+## Sections
 
-#### Option 1
+* Installation
+* Tools
+** Bash
+** Submlime Text
+*** v2
+*** v3
+** PHPStorm
+
+## Installation
+
+### Option 1
 
 You can clone the repository wherever you want. Run the following command to download the files and initiate the installer:
 
@@ -18,7 +30,7 @@ git clone https://github.com/austintoddj/dev-setup.git && cd dev-setup && source
 
 To remain up-to-date with any future changes, simply run `git pull` from the project to update your working copy, and then run `source update.sh`. The update script only runs the files within the `shell/` directory since there isn't any need to run the default configuration commands again.
 
-#### Option 2
+### Option 2
 
 If you prefer to not use Git, or simply don't have it installed on your machine, [click here](https://github.com/austintoddj/dev-setup/archive/master.zip) to download the project. Unzip the downloaded file and run `source init.sh` from inside.
 
@@ -26,6 +38,8 @@ To remain up-to-date with any future changes, just [click here](https://github.c
 
 <br/>
 <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/resources/terminal.png" width=>
+
+## Tools
 
 ### Bash
 
