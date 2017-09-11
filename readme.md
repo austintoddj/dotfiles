@@ -11,14 +11,14 @@ This repository contains automated setup scripts for my preferred tools and dev-
 ## Sections
 
 * Installation
-    * Option 1
-    * Option 2
+    * [Option 1](#option-1)
+    * [Option 2](#option-2)
 * Tools
-    *Bash
-    * Submlime Text
-        * v2
-        * v3
-    * PHPStorm
+    * [Bash](#bash)
+    * [Sublime Text](#sublime-text)
+        * [V2](#v2)
+        * [V3](#v3)
+    * [PHPStorm](#phpstorm)
 
 ## Installation
 
