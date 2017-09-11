@@ -4,7 +4,7 @@
 
 Easy-to-understand instructions with automated setup scripts for developer tools like **Vim**, **Sublime Text**, **Bash**, **PHPStorm**, **Git**, and dev-based macOS defaults.
 
-**Warning:** If you want to give these scripts a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what they entail. *Use at your own risk!*
+> **Warning:** If you want to give these scripts a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what they entail. *Use at your own risk!*
 
 ### Installation
 
