@@ -2,14 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BackgroundBlur</key>
+	<real>0.15243406791907516</real>
 	<key>BackgroundColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
-	AAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFjZVYkY2xhc3NPECgw
-	LjAxNTkyNDQwNTMxIDAuMTI2NTIwOTE2OCAwLjE1OTY5NjAxMjcAEAGAAtIQERITWiRj
-	bGFzc25hbWVYJGNsYXNzZXNXTlNDb2xvcqISFFhOU09iamVjdF8QD05TS2V5ZWRBcmNo
-	aXZlctEXGFRyb290gAEIERojLTI3O0FITltijY+RlqGqsrW+0NPYAAAAAAAAAQEAAAAA
-	AAAAGQAAAAAAAAAAAAAAAAAAANo=
+	AAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFjZVYkY2xhc3NPEDUw
+	LjAxNTkyNDQwNTMxIDAuMTI2NTIwOTE2OCAwLjE1OTY5NjAxMjcgMC45NDgxMTIzNTU1
+	ABABgALSEBESE1okY2xhc3NuYW1lWCRjbGFzc2VzV05TQ29sb3KiEhRYTlNPYmplY3Rf
+	EA9OU0tleWVkQXJjaGl2ZXLRFxhUcm9vdIABCBEaIy0yNztBSE5bYpqcnqOut7/Cy93g
+	5QAAAAAAAAEBAAAAAAAAABkAAAAAAAAAAAAAAAAAAADn
 	</data>
 	<key>BlinkText</key>
 	<false/>
@@ -38,7 +40,7 @@
 	<key>FontWidthSpacing</key>
 	<real>1.004032258064516</real>
 	<key>ProfileCurrentVersion</key>
-	<real>2.04</real>
+	<real>2.0499999999999998</real>
 	<key>SelectionColor</key>
 	<data>
 	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
@@ -50,8 +52,6 @@
 	</data>
 	<key>ShowActiveProcessArgumentsInTitle</key>
 	<true/>
-	<key>ShowActiveProcessInTitle</key>
-	<false/>
 	<key>ShowCommandKeyInTitle</key>
 	<false/>
 	<key>ShowDimensionsInTitle</key>
@@ -141,7 +141,7 @@
 	ZmZmg1MTpj6DeHnQPoPQg+A+AYY=
 	</data>
 	<key>columnCount</key>
-	<integer>100</integer>
+	<integer>130</integer>
 	<key>cyanColour</key>
 	<data>
 	BAtzdHJlYW10eXBlZIHoA4QBQISEhAdOU0NvbG9yAISECE5TT2JqZWN0AIWEAWMBhARm
@@ -184,7 +184,7 @@
 	ZmZmg6i7UT+DUATePYMl2hA+AYY=
 	</data>
 	<key>rowCount</key>
-	<integer>35</integer>
+	<integer>45</integer>
 	<key>type</key>
 	<string>Window Settings</string>
 	<key>whiteColour</key>

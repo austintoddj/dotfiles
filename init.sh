@@ -32,8 +32,8 @@ cp -rf ~/.bash_profile ~/.dev-backups/.bash_profile
 cp -rf ~/.git-prompt.sh ~/.dev-backups/.git-prompt.sh
 
 # Execute the base scripts
-SHELL_FILES=./shell/*
-for file in $SHELL_FILES; do
+SHELL_SCRIPTS=./scripts/*
+for file in $SHELL_SCRIPTS; do
     filename=$(basename "$file")
     ./$file
 done
