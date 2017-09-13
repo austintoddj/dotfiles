@@ -75,8 +75,6 @@ COL_RESET=$ESC_SEQ"39;49;00m"
         alias egrep='egrep --color=auto'
     fi
 
-    eval $( dircolors -b $HOME/.LS_COLORS)
-
 #   -----------------------------
 #   2. MAKE TERMINAL BETTER
 #   -----------------------------
