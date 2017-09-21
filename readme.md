@@ -40,7 +40,11 @@ The update script only runs the files within the `scripts/` directory since ther
 
 ### Option 2
 
-If you prefer to not use Git, or simply don't have it installed on your machine, [click here](https://github.com/austintoddj/dev-setup/archive/master.zip) to download the project. Unzip the downloaded file and run `source init.sh` from inside.
+If you prefer to not use Git, or simply don't have it installed on your machine, [click here](https://github.com/austintoddj/dev-setup/archive/master.zip) to download the project. Unzip the downloaded file and run the following command from inside:
+
+```sh
+source init.sh
+```
 
 To remain up-to-date with any future changes, just [click here](https://github.com/austintoddj/dev-setup/archive/master.zip) to re-download the project. Unzip the downloaded file and run the following command from inside:
 
