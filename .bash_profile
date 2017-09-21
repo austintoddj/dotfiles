@@ -65,7 +65,7 @@ COL_RESET=$ESC_SEQ"39;49;00m"
         fi
     fi
 
-    # enable color support of ls and also add handy aliases
+    # Enable color support of ls and also add handy aliases
     if [ -x /usr/bin/dircolors ]; then
         test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
         alias ls='ls --color=auto'
@@ -98,16 +98,31 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     alias f='open -a Finder ./'                 # f:            Opens current directory in macOS Finder
     alias c='clear'                             # c:            Clear terminal display
     alias which='type -all'                     # which:        Find executables
-    alias path='echo -e ${PATH//:/\\n}'         # path:         Echo all executable Paths
+    alias path='echo -e ${PATH//:/\\n}'         # path:         Print each PATH entry on a separate line
     alias show_options='shopt'                  # show_options: Display bash options settings
     alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
     alias gits='git status'                     # gits:         Check the status of a Git initialized repository
+    alias sudo='sudo '                          # sudo:         Enable aliases to be sudo’ed
 
     trash () { command mv "$@" ~/.Trash ; }     # trash:    Moves a file to the MacOS trash
     md() { mkdir -p "$@" && cd "$@" ; }         # Make a directory and enter it
     rd() { rm -rf "$@" ; }                      # Remove a directory and its files
 
-    #   lr:  Full Recursive Directory Listing
+    #   afk: Lock the screen (when going AFK)
+    #   ------------------------------------------
+    alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+    #   update: Get macOS Software Updates and update Homebrew, npm, and their installed packages
+    #   ------------------------------------------
+    alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g;
+
+    #   emptytrash: Empty the Trash on all mounted volumes and the main HDD.
+    #               Also, clear Apple’s System Logs to improve shell startup speed.
+    #               Finally, clear download history from quarantine.
+    #   ------------------------------------------
+    alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+
+    #   lr: Full Recursive Directory Listing
     #   ------------------------------------------
     alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 
