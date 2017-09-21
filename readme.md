@@ -36,7 +36,7 @@ To remain up-to-date with any future changes, simply run `git pull` from the pro
 source update.sh
 ``` 
  
-The update script only runs the files within the `shell/` directory since there isn't any need to run the default configuration commands again.
+The update script only runs the files within the `scripts/` directory since there isn't any need to run the default configuration commands again.
 
 ### Option 2
 
@@ -48,7 +48,7 @@ To remain up-to-date with any future changes, just [click here](https://github.c
 source update.sh
 ```
 
-The update script only runs the files within the `shell/` directory since there isn't any need to run the default configuration commands again.
+The update script only runs the files within the `scripts/` directory since there isn't any need to run the default configuration commands again.
 
 ## Tools
 
