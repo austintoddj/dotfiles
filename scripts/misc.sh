@@ -2,4 +2,4 @@
 
 echo -e "Updating miscellaneous configuration files..."
 
-cp -rf .hushlogin ~/.hushlogin
+[ -f ~/.hushlogin ] && cp -rf .hushlogin ~/.hushlogin || cp .hushlogin ~/.hushlogin

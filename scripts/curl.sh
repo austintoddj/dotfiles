@@ -2,4 +2,4 @@
 
 echo -e "Updating your Curl configuration file..."
 
-cp -rf .curlrc ~/.curlrc
+[ -f ~/.curlrc ] && cp -rf .curlrc ~/.curlrc || cp .curlrc ~/.curlrc

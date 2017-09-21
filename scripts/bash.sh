@@ -2,5 +2,5 @@
 
 echo -e "Updating your Bash setup and configuration..."
 
-cp -rf .bashrc ~/.bashrc
-cp -rf .bash_profile ~/.bash_profile
+[ -f ~/.bashrc ] && cp -rf .bashrc ~/.bashrc || cp .bashrc ~/.bashrc
+[ -f ~/.bash_profile ] && cp -rf .bash_profile ~/.bash_profile || cp .curlrc ~/.bash_profile

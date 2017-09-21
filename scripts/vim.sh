@@ -3,4 +3,4 @@
 echo -e "Updating your Vim setup and configuration..."
 
 cp -r .vim ~/.vim
-cp -rf .vimrc ~/.vimrc
+[ -f ~/.vimrc ] && cp -rf .vimrc ~/.vimrc || cp .vimrc ~/.vimrc
