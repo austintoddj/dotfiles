@@ -26,6 +26,7 @@ mkdir -pv ~/.dev-backups
 cp -r ~/.vim ~/.dev-backups/.vim
 cp -rf ~/.vimrc ~/.dev-backups/.vimrc
 cp -rf ~/.bashrc ~/.dev-backups/.bashrc
+cp -rf ~/.curlrc ~/.dev-backups/.curlrc
 cp -rf ~/.gitconfig ~/.dev-backups/.gitconfig
 cp -rf ~/.gitignore ~/.dev-backups/.gitignore
 cp -rf ~/.bash_profile ~/.dev-backups/.bash_profile
