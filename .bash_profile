@@ -112,9 +112,9 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     #   ------------------------------------------
     alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
-    #   update: Get macOS Software Updates and update Homebrew, npm, and their installed packages
+    #   update: Get macOS Software Updates and update Homebrew, Composer, npm, and their installed packages
     #   ------------------------------------------
-    alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g;"
+    alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo npm install npm -g; sudo npm update -g; sudo composer self-update; composer global update"
 
     #   emptytrash: Empty the Trash on all mounted volumes and the main HDD.
     #               Also, clear Apple’s System Logs to improve shell startup speed.
