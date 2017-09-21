@@ -120,13 +120,13 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     #               Also, clear Apple’s System Logs to improve shell startup speed.
     #               Finally, clear download history from quarantine.
     #   ------------------------------------------
-    alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+    # alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
 
     #   lr: Full Recursive Directory Listing
     #   ------------------------------------------
     alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 
-    #   mans:   Search manpage given in agument '1' for term given in argument '2' (case insensitive)
+    #   mans:   Search manpage given an argument '1' for term given in argument '2' (case insensitive)
     #           Displays paginated result with colored search terms and two lines surrounding each hit.
     #           Example: mans mplayer codec
     #   --------------------------------------------------------------------
