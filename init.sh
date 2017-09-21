@@ -408,8 +408,7 @@ for app in "Activity Monitor" \
             "Dock" \
             "Finder" \
             "Safari" \
-            "SystemUIServer" \
-            "Terminal"; do
+            "SystemUIServer"; do
     killall "${app}" > /dev/null 2>&1
 done
 
