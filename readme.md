@@ -30,13 +30,21 @@ You can clone the repository wherever you want. Run the following command to dow
 git clone https://github.com/austintoddj/dev-setup.git && cd dev-setup && source init.sh
 ```
 
-To remain up-to-date with any future changes, simply run `git pull` from the project to update your working copy, and then run `source update.sh`. The update script only runs the files within the `shell/` directory since there isn't any need to run the default configuration commands again.
+To remain up-to-date with any future changes, simply run `git pull` from the project to update your working copy, and then run the following command from inside. The update script only runs the files within the `shell/` directory since there isn't any need to run the default configuration commands again.
+
+```sh
+source update.sh
+```
 
 ### Option 2
 
 If you prefer to not use Git, or simply don't have it installed on your machine, [click here](https://github.com/austintoddj/dev-setup/archive/master.zip) to download the project. Unzip the downloaded file and run `source init.sh` from inside.
 
-To remain up-to-date with any future changes, just [click here](https://github.com/austintoddj/dev-setup/archive/master.zip) to re-download the project. Unzip the downloaded file and run `source update.sh` from the inside. The update script only runs the files within the `shell/` directory since there isn't any need to run the default configuration commands again.
+To remain up-to-date with any future changes, just [click here](https://github.com/austintoddj/dev-setup/archive/master.zip) to re-download the project. Unzip the downloaded file and run the following command from inside. The update script only runs the files within the `shell/` directory since there isn't any need to run the default configuration commands again.
+
+```sh
+source update.sh
+```
 
 ## Tools
 
