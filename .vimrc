@@ -1,6 +1,6 @@
 " Author:       Todd Austin <https://github.com/austintoddj>
 " Description:  A minimal, but feature rich Vim configuration file
-" URL:          https://github.com/austintoddj/dev-setup/Resources/.vimrc
+" URL:          https://github.com/austintoddj/dev-setup/blob/master/.vimrc
 
 " Use the Material Hybrid Color Scheme
 syntax on
