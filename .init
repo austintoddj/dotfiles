@@ -379,7 +379,7 @@ defaults write com.apple.DiskUtility advanced-image-options -bool true
 # Mac App Store                                                               #
 ###############################################################################
 
-echo -e "Configuring Mac App Store and update preferences..."
+echo -e "Configuring Mac App Store preferences..."
 
 # Enable the WebKit Developer Tools in the Mac App Store
 defaults write com.apple.appstore WebKitDeveloperExtras -bool true
@@ -423,7 +423,7 @@ for app in "Activity Monitor" \
 done
 
 echo ""
-echo -e "File backups have been created and can be accessed at $COL_YELLOW~/.dev-backups$COL_RESET"
+echo -e "Access your file backups at $COL_YELLOW~/.dev-backups$COL_RESET"
 echo ""
 
 # Stop the timer

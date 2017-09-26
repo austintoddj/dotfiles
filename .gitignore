@@ -1,24 +1,23 @@
-# IntelliJ IDEA IDE
-.idea
-
-# Compiled Python files
-*.pyc
-
-# Folder view configuration files
+# macOS hidden files
 .DS_Store
-Desktop.ini
-
-# Thumbnail cache files
+.DS_Store?
 ._*
-Thumbs.db
-
-# Files that might appear on external disks
 .Spotlight-V100
 .Trashes
+ehthumbs.db
+Thumbs.db
 
-# Files that contain credentials or personal info
-.extra
-.boto
-.mrjob.conf
-.s3cfg
-.aws/
+# Vim swap files
+.*.sw?
+
+# PhpStorm
+.idea
+
+# Sublime Text
+*.sublime-project
+
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
+.phpunit-watcher-cache.php
