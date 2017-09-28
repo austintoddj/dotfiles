@@ -7,8 +7,6 @@ syntax on
 set background=dark
 colorscheme hybrid_material
 
-" Display comments in italics
-let g:enable_italic_font = 1
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
