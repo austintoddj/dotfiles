@@ -113,7 +113,7 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 
     #   update: Get macOS Software Updates and update Homebrew, Composer and their installed packages
     #   ------------------------------------------
-    alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo composer self-update; composer global update"
+    alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; sudo composer self-update; composer global update;cleanupDS"
 
     #   emptytrash: Empty the Trash on all mounted volumes and the main HDD.
     #               Also, clear Apple’s System Logs to improve shell startup speed.
