@@ -101,7 +101,6 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     alias path='echo -e ${PATH//:/\\n}'         # path:         Print each PATH entry on a separate line
     alias show_options='shopt'                  # show_options: Display bash options settings
     alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
-    alias gits='git status'                     # gits:         Check the status of a Git initialized repository
     alias sudo='sudo '                          # sudo:         Enable aliases to be sudo’ed
 
     trash () { command mv "$@" ~/.Trash ; }     # trash:    Moves a file to the MacOS trash
@@ -289,9 +288,14 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   8. WEB DEVELOPMENT
 #   ---------------------------------------
 
+    #   Git
+    #   -------------------------------------------------------------------
+    alias gits='git status'                                 # gits:             Check the status of a Git initialized repository
+    alias gpa='git push origin master && git push origin develop && git push --tags'
+
     #   Laravel Framework
     #   -------------------------------------------------------------------
-    alias wipe='php artisan clear-compiled;php artisan optimize;php artisan view:clear;php artisan cache:clear;php artisan config:clear;php artisan route:clear;composer dumpautoload'
+    alias wipe='php artisan clear-compiled;php artisan view:clear;php artisan cache:clear;php artisan config:clear;php artisan route:clear;composer dumpautoload'
     alias clearLog='> ./storage/logs/laravel.log'           # clearLog:         Clear the log (Laravel)
     alias viewLog='cat ./storage/logs/laravel.log'          # viewLog:          View the log (Laravel)
 
@@ -336,14 +340,14 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   10. REMINDERS & NOTES
 #   ---------------------------------------
 
-#   remove_disk: Spin down unneeded disk
-#   ---------------------------------------
-#   diskutil eject /dev/disk1s3
+    #   remove_disk: Spin down unneeded disk
+    #   ---------------------------------------
+    #   diskutil eject /dev/disk1s3
 
-#   To change the password on an encrypted disk image:
-#   ---------------------------------------
-#   hdiutil chpass /path/to/the/diskimage
+    #   To change the password on an encrypted disk image:
+    #   ---------------------------------------
+    #   hdiutil chpass /path/to/the/diskimage
 
-#   To make a backup from one drive to another:
-#   ---------------------------------------
-#   alias backup='rsync -avrz --delete-after <SOURCE> <DESTINATION>' # Full Backup of <SOURCE> <DESTINATION>
+    #   To make a backup from one drive to another:
+    #   ---------------------------------------
+    #   alias backup='rsync -avrz --delete-after <SOURCE> <DESTINATION>' # Full Backup of <SOURCE> <DESTINATION>
