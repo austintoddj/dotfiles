@@ -1,7 +1,7 @@
 [alias]
 
     # View a descriptive, preferred format of the Git log
-    logg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    logg = log --decorate --oneline --color --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 
     # View all branches locally
     b = branch
