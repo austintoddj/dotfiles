@@ -29,6 +29,9 @@ brew services start mysql
 echo -e "Installing Git-Flow..."
 brew install git-flow-avh
 
+echo -e "Installing TLDR..."
+brew install tldr
+
 echo -e "Installing Yarn..."
 brew install yarn
 
