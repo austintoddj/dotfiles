@@ -19,7 +19,7 @@ echo "----------------------------------------------"
 echo -e "Installing Homebrew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo -e "Updating Homebrew..."
+echo -e "Running Homebrew Updates..."
 brew update
 
 echo -e "Installing MySQL..."
