@@ -33,14 +33,14 @@ echo "------------------------------------------------"
 # Back up files before replacement
 mkdir -pv ~/.dev-backups
 
-cp -r ~/.vim ~/.dev-backups/.vim
-cp -rf ~/.vimrc ~/.dev-backups/.vimrc
-cp -rf ~/.bashrc ~/.dev-backups/.bashrc
-cp -rf ~/.curlrc ~/.dev-backups/.curlrc
-cp -rf ~/.gitconfig ~/.dev-backups/.gitconfig
-cp -rf ~/.gitignore ~/.dev-backups/.gitignore
-cp -rf ~/.bash_profile ~/.dev-backups/.bash_profile
-cp -rf ~/.git-prompt.sh ~/.dev-backups/.git-prompt.sh
+[[ -e ~/.vim ]] && cp -r ~/.vim ~/.dev-backups/.vim
+[[ -e ~/.vimrc ]] && cp -r ~/.vimrc ~/.dev-backups/.vimrc
+[[ -e ~/.bashrc ]] && cp -r ~/.bashrc ~/.dev-backups/.bashrc
+[[ -e ~/.curlrc ]] && cp -r ~/.curlrc ~/.dev-backups/.curlrc
+[[ -e ~/.gitconfig ]] && cp -r ~/.gitconfig ~/.dev-backups/.gitconfig
+[[ -e ~/.gitignore ]] && cp -r ~/.gitignore ~/.dev-backups/.gitignore
+[[ -e ~/.bash_profile ]] && cp -r ~/.bash_profile ~/.dev-backups/.bash_profile
+[[ -e ~/.git-prompt.sh ]] && cp -r ~/.git-prompt.sh ~/.dev-backups/.git-prompt.sh
 
 # Execute the base scripts
 SHELL_SCRIPTS=./scripts/*
