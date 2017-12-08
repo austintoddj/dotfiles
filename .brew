@@ -38,6 +38,9 @@ brew install yarn
 echo -e "Installing Sqlite..."
 brew install sqlite
 
+echo -e "Installing GnuPG..."
+brew install gnupg
+
 echo -e "Cleaning up the cellar..."
 brew cleanup
 
