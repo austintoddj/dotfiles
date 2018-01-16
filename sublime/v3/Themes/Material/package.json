@@ -1,41 +1,47 @@
 {
   "name": "material-theme",
-  "version": "2.1.2",
-  "email": "astorino.design@gmail.com",
+  "version": "4.1.3",
   "description": "Material Theme for Sublime Text 3",
-  "main": "gulpfile.js",
-  "dependencies": {
-    "gulp": "^3.8.11",
-    "gulp-clean": "^0.3.1",
-    "gulp-concat-json": "^1.0.0",
-    "gulp-concat-json2js": "^0.1.0",
-    "gulp-duration": "0.0.0",
-    "gulp-notify": "^2.2.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-wrap": "^0.11.0",
-    "path": "^0.11.14",
-    "run-sequence": "^1.1.5",
-    "gulp-util": "^3.0.7"
+  "main": "gulpfile.babel.js",
+  "scripts": {
+    "build": "gulp",
+    "bt": "gulp build:themes",
+    "bs": "gulp build:schemes",
+    "bump": "gulp bump",
+    "changelog": "gulp changelog"
   },
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-clean": "^0.3.1",
-    "gulp-concat-json": "^1.0.0",
-    "gulp-concat-json2js": "^0.1.0",
-    "gulp-duration": "0.0.0",
-    "gulp-notify": "^2.2.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-root-import": "^4.1.8",
+    "colors": "^1.1.2",
+    "conventional-github-releaser": "^2.0.0",
+    "del": "^3.0.0",
+    "eslint": "^4.13.1",
+    "eslint-plugin-standard": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-bump": "^2.9.0",
+    "gulp-conventional-changelog": "^1.1.7",
+    "gulp-data": "^1.2.1",
+    "gulp-exec": "^2.1.3",
+    "gulp-flatmap": "^1.0.0",
+    "gulp-git": "^2.4.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.0.0",
+    "gulp-include": "^2.3.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-util": "^3.0.7",
-    "gulp-wrap": "^0.11.0",
-    "path": "^0.11.14",
-    "run-sequence": "^1.1.5"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "gulp-replace": "^0.6.1",
+    "gulp-stats": "0.0.4",
+    "gulp-template": "^4.0.0",
+    "lodash": "^4.17.4",
+    "run-sequence": "^2.2.0",
+    "yargs": "^10.0.3"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://equinusocio@github.com/equinusocio/material-theme.git"
+    "url": "https://equinusocio@github.com/equinusocio/material-theme.git"
   },
   "keywords": [
     "material",

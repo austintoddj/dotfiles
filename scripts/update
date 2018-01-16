@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo "Updating your macOS development environment..."
+
+###############################################################################
+# Shell Scripts                                                               #
+###############################################################################
+
+# Back up files before replacement
+mkdir -pv ~/.dev-backups
+
+cp -r ~/.vim ~/.dev-backups/.vim
+cp -rf ~/.vimrc ~/.dev-backups/.vimrc
+cp -rf ~/.bashrc ~/.dev-backups/.bashrc
+cp -rf ~/.curlrc ~/.dev-backups/.curlrc
+cp -rf ~/.gitconfig ~/.dev-backups/.gitconfig
+cp -rf ~/.gitignore ~/.dev-backups/.gitignore
+cp -rf ~/.bash_profile ~/.dev-backups/.bash_profile
+cp -rf ~/.git-prompt.sh ~/.dev-backups/.git-prompt.sh
+
+# Execute the base scripts
+SHELL_SCRIPTS=./scripts/*
+for f in $SHELL_SCRIPTS; do
+    filename=$(basename "$f")
+    ./$f
+done
+
+echo "Finished. File backups have been created and can be accessed at ~/.dev-backups"

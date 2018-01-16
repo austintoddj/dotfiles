@@ -1,4 +1,18 @@
-.DS_Store
-material-palette.less
+# Development
+# =============================
+
+*.sublime-project
+*.sublime-workspace
+*.cache
 node_modules/
-bkp/
+
+images.cache
+schemes/*.YAML-tmTheme
+sources/schemes/scheme.tmTheme
+build/
+
+
+# OS
+# =============================
+
+.DS_Store
