@@ -62,7 +62,6 @@ echo "Installing Homebrew packages"
 
 homebrew_packages=(
   "git-flow-avh"
-  "gnupg"
   "mas"
   "mysql"
   "sqlite"
@@ -528,6 +527,26 @@ Most things are taken care of automatically with the setup script, but some manu
 - Terminal
   - Open Terminal > Settings and import the Solarized Dark ansi.terminal theme
   - Update Font/Cursor/Startup as needed
+  - New window with profile (Solarized)
+  - Shells open with (Default login shell)
+  - New windows open with (Default Profile, Default Working Directory)
+  - New tabs open with (Same Profile, Default Working Directory)
+  - Use high-contrast I beam (on)
+  - Font (Operator Mono Book 11pt)
+  - Text
+    - Antialias text (on)
+    - Use bold fonts (off)
+    - Allow blinking text (off)
+    - Display ANSI colors (on)
+    - Use bright colors for bold text (on)
+  - Cursor
+    - Block (on)
+    - Underline (off)
+    - Vertical Bar (off)
+    - Blink cursor (on)
+  - Window Size
+    - Columns (130)
+    - Rows (45)
 - Photoshop
   - Sign in with Adobe Creative Cloud
 - Pages
@@ -542,11 +561,15 @@ Most things are taken care of automatically with the setup script, but some manu
   - Sign in
   - Highest quality of streaming and downloads
 - App Store
+  - Automatically check for updates (on)
+  - Download newly available updates in the background (off)
+  - Install app updates (off)
+  - Install macOS updates (off)
+  - Install system data files and security updates (off)
 - 1Password
   - Already done ^
 - Github
   - Set up SSH keys
-  - Define signingkey in .gitconfig (https://help.github.com/articles/signing-commits-using-gpg)
 
 Then, restart desktop.
 

@@ -1,5 +1,7 @@
+.env files support
 BashSupport
 CodeGlance
+JavaScript.next Support Plugin
 Laravel Plugin
+LaravelStorm
 Material Theme UI
-Handlebars/Mustache
