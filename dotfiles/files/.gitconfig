@@ -148,6 +148,10 @@
 [url "git://gist.github.com/"]
     insteadOf = "gist:"
 
+[commit]
+	gpgsign = true
+
 [user]
+    signingkey = E647A74A7B4074FD
 	name = Todd Austin
 	email = austin.todd.j@gmail.com
