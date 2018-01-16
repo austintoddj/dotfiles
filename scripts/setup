@@ -460,7 +460,7 @@ done
 # MANUAL
 # ==================================================================
 
-#cat << EOF
+cat << EOF
 
 Most things are taken care of automatically with the setup script, but some manual items are needed:
 
@@ -507,7 +507,7 @@ Most things are taken care of automatically with the setup script, but some manu
 - MacDown
 - Sublime
   - Install the Package Manager
-  - Install the Sublime Text > v3 > Material theme in Packages/Material Theme/schemes/Material-Theme.tmTheme
+  - Install Material theme in Packages/Material Theme/schemes/Material-Theme.tmTheme
   - Replace the contents of Preferences.sublime-settings, Distraction Free.sublime-settings
   - Install packages
   - Restart Sublime
