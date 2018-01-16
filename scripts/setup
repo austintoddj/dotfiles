@@ -466,8 +466,12 @@ Most things are taken care of automatically with the setup script, but some manu
 
 # Desktop setup
 
-- Text Message Forwarding (on, from iPhone)
-- Setup dock icons (Finder, Safari, Chrome, Calendar, YummyFTP, MacDown, Sublime, PhpStorm, Xcode, Sequel Pro, Navicat, Terminal, Photoshop, Pages, Keynote, Numbers, Notes, Slack, Messages, Spotify, App Store, 1Password)
+- Dropbox
+  - Download and configure
+- 1Password
+  - Download and import existing vault
+- iCloud
+  - Enable everything except (Back to My Mac)
 - Delete unused factory Applications
 - Display notification center widgets (Calendar)
 - Users
@@ -484,14 +488,56 @@ Most things are taken care of automatically with the setup script, but some manu
   - Correct spelling automatically (off)
   - Remove items from the Trash after 30 days (off)
   - Keep folders on top when sorting by name (off)
-- iCloud
-  - Enable everything except (Back to My Mac)
 - Safari
   - Extensions
     - Confirm install (1Password, Adblock Plus)
+- Chrome
+  - Import bookmarks from Safari
+  - Extensions
+    - Confirm install (1Password, Adblock Plus)
+- Calendar
+- YummyFTP
+  - Link bookmarks to Dropbox Apps
+- MacDown
+- Sublime
+  - Install the Package Manager
+  - Install the Sublime Text > v3 > Material theme in Packages/Material Theme/schemes/Material-Theme.tmTheme
+  - Replace the contents of Preferences.sublime-settings, Distraction Free.sublime-settings
+  - Install packages
+  - Restart Sublime
+  - Enter license
+- PhpStorm
+  - Install Material Theme UI in Settings > Preferences > Plugins > Browse Repositories
+  - Restart PHPStorm
+  - IDE theme (not the code color scheme) can be changed in Tools > Material Theme
+  - Install packages
+  - Enter license
+- Xcode
+- Sequel Pro
+  - Import bookmarks
+- Navicat
+  - Enter license
+  - Sign in
+- Terminal
+  - Open Terminal > Settings and import the Solarized Dark ansi.terminal theme
+  - Update Font/Cursor/Startup as needed
+- Photoshop
+  - Sign in
+- Pages
+- Keynote
+- Numbers
+- Notes
+- Slack
+  - Sign in
+    - cnvs-io.slack.com
+- Messages
+  - Text Message Forwarding (on, from iPhone)
 - Spotify
   - Sign in
   - Highest quality of streaming and downloads
+- App Store
+- 1Password
+  - Already done ^
 
 Then, restart desktop.
 
