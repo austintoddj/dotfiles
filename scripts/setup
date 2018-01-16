@@ -460,7 +460,7 @@ done
 # MANUAL
 # ==================================================================
 
-#cat << EOF
+cat << EOF
 
 Most things are taken care of automatically with the setup script, but some manual items are needed:
 
@@ -538,7 +538,6 @@ Most things are taken care of automatically with the setup script, but some manu
 - App Store
 - 1Password
   - Already done ^
-
 - Github
   - Set up SSH keys
   - Set up GPG (https://help.github.com/articles/signing-commits-using-gpg)
