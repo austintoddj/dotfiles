@@ -486,7 +486,7 @@ Most things are taken care of automatically with the setup script, but some manu
 - Finder
   - New Finder windows show (austintoddj)
   - Open folders in new tabs instead of windows (off)
-  - Favorites (iCloudDrive, Applications, Desktop, Sites, Apps, Documents, Dropbox, austintoddj)
+  - Favorites (iCloud Drive, Applications, Desktop, Sites, Documents, Dropbox, austintoddj)
   - Show all filename extensions (off)
   - Show warning before changing an extension (off)
   - Show warning before removing from iCloud Drive (on)
