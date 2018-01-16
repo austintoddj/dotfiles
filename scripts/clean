@@ -30,7 +30,6 @@ done
 # ==================================================================
 
 killall node || true
-tmux kill-server || true
 
 
 # ==================================================================
@@ -69,7 +68,7 @@ deep-git-prune ()
   git remote prune origin
 }
 
-cd "$HOME/repos"
+cd "$HOME/Sites"
 
 for i in */.git; do ( echo $i; cd $i/..; deep-git-prune; ); done
 
