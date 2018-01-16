@@ -29,6 +29,10 @@ sudo composer self-update
 echo "Updating Composer packages"
 composer global update
 
+# TLDR
+echo "Updating TLDR"
+tldr --update
+
 
 # ==================================================================
 # MAC APP STORE
