@@ -11,6 +11,7 @@ sudo -v
 # has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+
 # ==================================================================
 # ROOT
 # ==================================================================
@@ -21,6 +22,7 @@ mkdir Sites
 cd ~/Sites
 git clone https://github.com/austintoddj/dev-setup.git
 
+
 # ==================================================================
 # DOTFILES
 # ==================================================================
@@ -29,6 +31,7 @@ cd ~/Sites/dev-setup/files
 ./index
 
 cd ~
+
 
 # ==================================================================
 # PACKAGES
@@ -73,6 +76,7 @@ done
 echo "Upgrading NPM"
 npm install npm@latest -g
 
+
 # ==================================================================
 # APPS / FONTS
 # ==================================================================
@@ -81,6 +85,7 @@ echo "Installing Homebrew cask apps"
 
 homebrew_cask_packages=(
   "1password"
+  "adobe-creative-cloud"
   "bettertouchtool"
   "cleanmymac"
   "google-chrome"
@@ -107,11 +112,19 @@ for mac_app_store_app in "${mac_app_store_apps[@]}"; do
   mas install "$mac_app_store_app"
 done
 
+echo "Installing fonts"
+for font in $(find "./fonts" -depth 1 -exec basename {} \;); do
+  cp -R "$(pwd)/fonts/$font" "~/Library/Fonts/"
+done
+
+
 # ==================================================================
 # MACOS
 # ==================================================================
 
-echo "General UI/UX configuration..."
+echo "Configuring macOS:"
+
+echo "General UI/UX"
 
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
@@ -144,12 +157,12 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
 
-echo "Optimizing SSD performance..."
+echo "Optimizing SSD"
 
 # Disable hibernation (speeds up entering sleep mode)
 sudo pmset -a hibernatemode 0
 
-echo "Keyboard and inputs configuration..."
+echo "Keyboard and inputs"
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -168,7 +181,7 @@ defaults write NSGlobalDomain KeyRepeat -int 3
 # Set a shorter delay until key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
-echo "Display and screen configuration..."
+echo "Display and screen"
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
@@ -183,7 +196,7 @@ defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
 
-echo "Finder options and configuration..."
+echo "Finder options"
 
 # Finder: disable window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
@@ -264,7 +277,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
     OpenWith -bool true \
     Privileges -bool true
 
-echo "Dock, dashboard, and hot corners configuration..."
+echo "Dock, dashboard, and hot corners"
 
 # Set the icon size of Dock items to 30 pixels
 defaults write com.apple.dock tilesize -int 30
@@ -305,7 +318,7 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.a
 # Top left screen corner → Mission Control
 defaults write com.apple.dock wvous-tl-corner -int 2
 
-echo "Safari and WebKit configuration..."
+echo "Safari and WebKit"
 
 # Privacy: don’t send search queries to Apple
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
@@ -362,17 +375,17 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 # Always display the status bar
 defaults write com.apple.Safari ShowStatusBar -boolean true
 
-echo "Terminal.app settings and configuration..."
+echo "Terminal.app settings"
 
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-echo "Time Machine configuration..."
+echo "Time Machine"
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-echo "Activity Monitor configuration..."
+echo "Activity Monitor"
 
 # Show the main window when launching Activity Monitor
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
@@ -387,7 +400,7 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
-echo "TextEdit and Disk Utility default configuration..."
+echo "TextEdit and Disk Utility"
 
 # Use plain text mode for new TextEdit documents
 defaults write com.apple.TextEdit RichText -int 0
@@ -403,7 +416,7 @@ defaults write com.apple.TextEdit "TabWidth" '4'
 defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
 defaults write com.apple.DiskUtility advanced-image-options -bool true
 
-echo "Configuring Mac App Store preferences..."
+echo "Mac App Store preferences"
 
 # Enable the WebKit Developer Tools in the Mac App Store
 defaults write com.apple.appstore WebKitDeveloperExtras -bool true
@@ -432,7 +445,7 @@ defaults write com.apple.commerce AutoUpdate -bool true
 # Allow the App Store to reboot machine on macOS updates
 defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 
-echo "Resetting affected applications..."
+echo "Resetting affected applications"
 
 for app in "Activity Monitor" \
             "Dock" \
@@ -442,14 +455,88 @@ for app in "Activity Monitor" \
     killall "${app}" > /dev/null 2>&1
 done
 
+
 # ==================================================================
 # MANUAL
 # ==================================================================
 
 cat << EOF
 
-Some of these changes require a logout/restart of your OS to take effect.
-
 Most things are taken care of automatically with the setup script, but some manual items are needed:
+
+# Desktop setup
+
+- Text Message Forwarding (on, from iPhone)
+- Setup dock icons (Finder, Safari, Chrome, Calendar, YummyFTP, MacDown, Sublime, PhpStorm, Xcode, Sequel Pro, Navicat, Terminal, Photoshop, Pages, Keynote, Numbers, Notes, Slack, Messages, Spotify, App Store, 1Password)
+- Delete unused factory Applications
+- Display notification center widgets (Calendar)
+- Users
+  - Add avatar
+  - Login items (BetterTouchTool, Dropbox)
+- Finder
+  - New Finder windows show (austintoddj)
+  - Open folders in new tabs instead of windows (off)
+  - Favorites (iCloudDrive, Applications, Desktop, Sites, Apps, Documents, Dropbox, austintoddj)
+  - Show all filename extensions (off)
+  - Show warning before changing an extension (off)
+  - Show warning before removing from iCloud Drive (on)
+  - Show warning before emptying the Trash (on)
+  - Correct spelling automatically (off)
+  - Remove items from the Trash after 30 days (off)
+  - Keep folders on top when sorting by name (off)
+- iCloud
+  - Enable everything except (Back to My Mac)
+- Safari
+  - Extensions
+    - Confirm install (1Password, Adblock Plus)
+- Spotify
+  - Sign in
+  - Highest quality of streaming and downloads
+
+Then, restart desktop.
+
+# Mobile setup (iPhone)
+
+- Settings
+  - Sign in with Apple ID
+  - Text message forwarding to desktop
+  - Send as SMS when iMessage is unavailable
+  - Don't store passwords in Safari
+  - Restrictions (off)
+  - Cellular enable everything
+  - Turn off predictive keyboard
+- App organization
+  - Dock
+    - Phone, Inbox, Safari, Spotify
+  - Screen 1
+    - Messages, Calendar, Flickr, Camera, Dark Sky, Google Maps, Clock, YouTube, Facebook, Twitter, Instagram, LinkedIn, Messenger, Reddit, Dropbox, Slack, 1Password, Google Authenticator, Microsoft Authenticator, Photos, App Store, Notes, Reminders, Settings
+  - Screen 2
+    - Folder: Design
+      - PS Express, Photoshop Fix, Photoshop Mix, Phonto, ProCam
+    - Folder: Development
+      - Analytics, CodeHub, Prompt, Transmit
+    - Folder: Entertainment
+      - Netflix, Facebook Page, Remote, TV
+    - Folder: Food
+      - Chick-fil-A, Chipotle, Jimmy John's, Starbucks
+    - Folder: Gaming
+      - Halo Channel, IGN, Pokemon Go, Xbox
+    - Folder: iOS
+    - Folder: Misc
+      - Drive Safe & Save, TCF Bank
+    - Folder: Network
+      - Fing, Scany, Speedtest
+    - Folder: Shop
+      - 1-800 Contacts, Amazon, Best Buy, FedEx, Target, Walmart
+- Widgets (Weather, Up Next)
+- Delete unused stock apps
+- Clock
+  - Set up alarms
+- Find iPhone
+  - Turn on Send Last Location
+- Health
+  - Set up profile and medical ID
+- Wallet
+  - Add debit card for Apple Pay
 
 EOF

@@ -3,23 +3,17 @@ echo "Symlinking dotfiles"
 # Create backup files
 mkdir -pv ~/.dev-backups
 
-[[ -e ~/.vim ]] && cp -r ~/.vim ~/.dev-backups/.vim
-[[ -e ~/.vimrc ]] && cp -r ~/.vimrc ~/.dev-backups/.vimrc
-[[ -e ~/.bashrc ]] && cp -r ~/.bashrc ~/.dev-backups/.bashrc
-[[ -e ~/.curlrc ]] && cp -r ~/.curlrc ~/.dev-backups/.curlrc
-[[ -e ~/.gitconfig ]] && cp -r ~/.gitconfig ~/.dev-backups/.gitconfig
-[[ -e ~/.gitignore ]] && cp -r ~/.gitignore ~/.dev-backups/.gitignore
-[[ -e ~/.bash_profile ]] && cp -r ~/.bash_profile ~/.dev-backups/.bash_profile
-[[ -e ~/.git-prompt.sh ]] && cp -r ~/.git-prompt.sh ~/.dev-backups/.git-prompt.sh
-
-cp -r ~/.vim ~/.dev-backups/.vim
-cp -rf ~/.vimrc ~/.dev-backups/.vimrc
-cp -rf ~/.bashrc ~/.dev-backups/.bashrc
-cp -rf ~/.curlrc ~/.dev-backups/.curlrc
-cp -rf ~/.gitconfig ~/.dev-backups/.gitconfig
-cp -rf ~/.gitignore ~/.dev-backups/.gitignore
-cp -rf ~/.bash_profile ~/.dev-backups/.bash_profile
-cp -rf ~/.git-prompt.sh ~/.dev-backups/.git-prompt.sh
+# Copy the files and then delete the originals
+[[ -e ~/.bash_profile ]] && cp -r ~/.bash_profile ~/.dev-backups/.bash_profile && rm ~/.bash_profile
+[[ -e ~/.bashrc ]] && cp -r ~/.bashrc ~/.dev-backups/.bashrc && rm ~/.bashrc
+[[ -e ~/.curlrc ]] && cp -r ~/.curlrc ~/.dev-backups/.curlrc && rm ~/.curlrc
+[[ -e ~/.git-prompt.sh ]] && cp -r ~/.git-prompt.sh ~/.dev-backups/.git-prompt.sh && rm ~/.git-prompt.sh
+[[ -e ~/.gitattributes ]] && cp -r ~/.gitattributes ~/.dev-backups/.gitattributes && rm ~/.gitattributes
+[[ -e ~/.gitconfig ]] && cp -r ~/.gitconfig ~/.dev-backups/.gitconfig && rm ~/.gitconfig
+[[ -e ~/.gitignore ]] && cp -r ~/.gitignore ~/.dev-backups/.gitignore && rm ~/.gitignore
+[[ -e ~/.hushlogin ]] && cp -r ~/.hushlogin ~/.dev-backups/.hushlogin && rm ~/.hushlogin
+[[ -e ~/.vim ]] && cp -r ~/.vim ~/.dev-backups/.vim && rm -rf ~/.vim
+[[ -e ~/.vimrc ]] && cp -r ~/.vimrc ~/.dev-backups/.vimrc && rm ~/.vimrc
 
 # Create the symlinks
 for file in $(find "./files" -depth 1 -exec basename {} \;); do
