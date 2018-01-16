@@ -461,20 +461,26 @@ done
 # MANUAL
 # ==================================================================
 
-cat << EOF
+#cat << EOF
 
 Most things are taken care of automatically with the setup script, but some manual items are needed:
 
 # Desktop setup
 
 - Dropbox
-  - Download and configure
+  - Start Dropbox on system startup (on)
+  - Enable Finder integration (on)
+  - Dropbox folder location (austintoddj)
 - 1Password
-  - Download and import existing vault
+  - Import existing vault from Dropbox
+  - Always keep 1Password mini running (on)
+  - Show mini app icon in the menu bar (on)
+  - Use rich icons (on)
+  - Show item count in the sidebar (on)
 - iCloud
   - Enable everything except (Back to My Mac)
 - Delete unused factory Applications
-- Display notification center widgets (Calendar)
+- Notification center widgets (Calendar)
 - Users
   - Add avatar
   - Login items (BetterTouchTool, Dropbox)
@@ -523,14 +529,13 @@ Most things are taken care of automatically with the setup script, but some manu
   - Open Terminal > Settings and import the Solarized Dark ansi.terminal theme
   - Update Font/Cursor/Startup as needed
 - Photoshop
-  - Sign in
+  - Sign in with Adobe Creative Cloud
 - Pages
 - Keynote
 - Numbers
 - Notes
 - Slack
-  - Sign in
-    - cnvs-io.slack.com
+  - Sign in to workspace (cnvs-io.slack.com)
 - Messages
   - Text Message Forwarding (on, from iPhone)
 - Spotify
