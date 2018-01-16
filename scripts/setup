@@ -88,14 +88,15 @@ homebrew_cask_packages=(
   "adobe-creative-cloud"
   "bettertouchtool"
   "cleanmymac"
+  "dropbox"
   "google-chrome"
   "macdown"
   "navicat-premium-essentials"
+  "phpstorm"
   "sequel-pro"
   "slack"
   "spotify"
   "sublime-text"
-  "phpstorm"
   "yummy-ftp"
 )
 for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
