@@ -1,5 +1,3 @@
-## Dev Setup
-
 <p align="center">
     <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/resources/header.jpg">
 </p>
