@@ -1,9 +1,9 @@
 echo "Symlinking dotfiles"
 
-# Create backup files
+# Create a backup directory
 mkdir -pv ~/.dev-backups
 
-# Copy the files and then delete the originals
+# Copy existing files and delete the originals
 [[ -e ~/.bash_profile ]] && cp -r ~/.bash_profile ~/.dev-backups/.bash_profile && rm ~/.bash_profile
 [[ -e ~/.bashrc ]] && cp -r ~/.bashrc ~/.dev-backups/.bashrc && rm ~/.bashrc
 [[ -e ~/.curlrc ]] && cp -r ~/.curlrc ~/.dev-backups/.curlrc && rm ~/.curlrc
