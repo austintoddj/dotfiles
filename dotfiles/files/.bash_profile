@@ -279,11 +279,6 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   8. WEB DEVELOPMENT
 #   ---------------------------------------
 
-    #   Git
-    #   -------------------------------------------------------------------
-    alias gits='git status'                                 # gits:             Check the status of a Git initialized repository
-    alias gpa='git push origin master && git push origin develop && git push --tags'
-
     #   Laravel Framework
     #   -------------------------------------------------------------------
     alias wipe='php artisan clear-compiled;php artisan view:clear;php artisan cache:clear;php artisan config:clear;php artisan route:clear;composer dumpautoload'
