@@ -4,20 +4,20 @@
     email = austin.todd.j@gmail.com
 
 [alias]
+    # View a descriptive, preferred format of the Git log
+    logg = log --decorate --oneline --color --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+
     # Check the status of a Git initialized repository
     s = status
-    
-    # Push master/develop and all tags
-    pa = !"git push origin master && git push origin develop && git push --tags"
-    
-    # View a descriptive, preferred format of the Git log
-    l = log --decorate --oneline --color --graph --abbrev-commit --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
 
     # View all branches locally
     b = branch
 
     # Commit all changes
     ca = !git add -A && git commit -av
+
+    # Push master/develop and all tags
+    pa = !"git push origin master && git push origin develop && git push --tags"
 
     # List contributors with number of commits
     contributors = shortlog --summary --numbered
