@@ -562,7 +562,8 @@ Most things are taken care of automatically with the setup script, but some manu
 - Numbers
 - Notes
 - Slack
-  - Sign in to workspace (cnvs-io.slack.com)
+  - Sign in to workspace (cnvs-io, t2d)
+  - Configure downloads to Desktop
 - Messages
   - Text Message Forwarding (on, from iPhone)
 - Spotify
@@ -609,7 +610,7 @@ Then, restart desktop.
       - Halo Channel, IGN, Pokemon Go, Xbox
     - Folder: iOS
     - Folder: Misc
-      - Drive Safe & Save, TCF Bank
+      - Drive Safe & Save, MyFitnessPal, TCF Bank
     - Folder: Network
       - Fing, Scany, Speedtest
     - Folder: Shop
@@ -622,6 +623,7 @@ Then, restart desktop.
   - Turn on Send Last Location
 - Health
   - Set up profile and medical ID
+  - Blood type O+
 - Wallet
   - Add debit card for Apple Pay
 
