@@ -1,7 +1,7 @@
 <p align="center">
     <img src="https://raw.githubusercontent.com/austintoddj/dev-setup/master/resources/header.jpg">
 </p>
-—-
+
 
 I've always enjoyed watching developers work. Which editor do they use? Do they prefer Terminal or iTerm? Are they using a virtual machine? If only in small pieces, I've learned from every developer I've ever worked with.
 
