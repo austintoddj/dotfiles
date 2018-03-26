@@ -1,4 +1,4 @@
-echo "Symlinking dotfiles"
+echo "Creating dotfiles"
 
 # Create a backup directory
 mkdir -pv ~/.dev-backups
@@ -15,7 +15,7 @@ mkdir -pv ~/.dev-backups
 [[ -e ~/.vim ]] && cp -r ~/.vim ~/.dev-backups/.vim && rm -rf ~/.vim
 [[ -e ~/.vimrc ]] && cp -r ~/.vimrc ~/.dev-backups/.vimrc && rm ~/.vimrc
 
-# Create the symlinks
+# Create the files
 for file in $(find "./files" -depth 1 -exec basename {} \;); do
-  ln -s "$(pwd)/files/$file" "$HOME/$file"
+  cp -r "$(pwd)/files/$file" "$HOME/$file"
 done

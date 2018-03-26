@@ -1,16 +1,18 @@
+A File Icon
+All Autocomplete
 AutoFileName
 Autoprefixer
-All Autocomplete
 Blade Snippets
-Blade Spacer
 BracketHighlighter
 DocBlockr
 Emmet
 FuzzyFileNav
 FuzzyFilePath
+Laravel Blade Autocomplete
 Laravel Blade Highlighter
+Laravel Blade Spacer
 PhpDoc
 PyV8
-Reindent Lines
+Reindent
 SideBarEnhancements
 SublimeCodeIntel

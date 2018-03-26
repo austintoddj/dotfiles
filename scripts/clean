@@ -43,6 +43,8 @@ brew prune
 
 # Remove .DS_Store files
 find "$HOME" -name '.DS_Store' -delete
+
+# Clear the Downloads directory
 rm -rf "$HOME"/Downloads/*
 
 

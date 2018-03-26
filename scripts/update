@@ -18,10 +18,6 @@ echo "Updating Homebrew packages"
 brew update
 brew upgrade
 
-# NPM
-echo "Updating npm"
-npm install npm@latest -g
-
 # COMPOSER
 echo "Updating Composer"
 sudo composer self-update

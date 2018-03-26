@@ -11,18 +11,6 @@ sudo -v
 # has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-
-# ==================================================================
-# ROOT
-# ==================================================================
-
-cd ~
-mkdir Sites
-
-cd ~/Sites
-git clone https://github.com/austintoddj/dev-setup.git
-
-
 # ==================================================================
 # DOTFILES
 # ==================================================================
@@ -31,7 +19,6 @@ cd ~/Sites/dev-setup/files
 ./index
 
 cd ~
-
 
 # ==================================================================
 # PACKAGES
@@ -72,9 +59,8 @@ for homebrew_package in "${homebrew_packages[@]}"; do
   brew install "$homebrew_package"
 done
 
-echo "Upgrading NPM"
+echo "Installing NPM"
 npm install npm@latest -g
-
 
 # ==================================================================
 # APPS / FONTS
@@ -117,14 +103,11 @@ for font in $(find "./fonts" -depth 1 -exec basename {} \;); do
   cp -R "$(pwd)/fonts/$font" "~/Library/Fonts/"
 done
 
-
 # ==================================================================
 # MACOS
 # ==================================================================
 
-echo "Configuring macOS:"
-
-echo "General UI/UX"
+echo "Configuring general UI/UX"
 
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
@@ -165,7 +148,7 @@ echo "Optimizing SSD"
 # Disable hibernation (speeds up entering sleep mode)
 sudo pmset -a hibernatemode 0
 
-echo "Keyboard and inputs"
+echo "Configuring keyboard and inputs"
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -184,7 +167,7 @@ defaults write NSGlobalDomain KeyRepeat -int 3
 # Set a shorter delay until key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
-echo "Display and screen"
+echo "Configuring display and screen"
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
@@ -199,7 +182,7 @@ defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
 
-echo "Finder options"
+echo "Configuring finder options"
 
 # Finder: disable window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
@@ -280,7 +263,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
     OpenWith -bool true \
     Privileges -bool true
 
-echo "Dock, dashboard, and hot corners"
+echo "Configuring dock, dashboard, and hot corners"
 
 # Remove all default icons from the dock
 defaults delete com.apple.dock persistent-apps
@@ -325,7 +308,7 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.a
 # Top left screen corner → Mission Control
 defaults write com.apple.dock wvous-tl-corner -int 2
 
-echo "Safari and WebKit"
+echo "Configuring Safari and WebKit"
 
 # Privacy: don’t send search queries to Apple
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
@@ -382,17 +365,17 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 # Always display the status bar
 defaults write com.apple.Safari ShowStatusBar -boolean true
 
-echo "Terminal.app settings"
+echo "Configuring Terminal.app settings"
 
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-echo "Time Machine"
+echo "Configuring Time Machine"
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-echo "Activity Monitor"
+echo "Configuring Activity Monitor"
 
 # Show the main window when launching Activity Monitor
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
@@ -407,7 +390,7 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
-echo "TextEdit and Disk Utility"
+echo "Configuring TextEdit and Disk Utility"
 
 # Use plain text mode for new TextEdit documents
 defaults write com.apple.TextEdit RichText -int 0
@@ -423,7 +406,7 @@ defaults write com.apple.TextEdit "TabWidth" '4'
 defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
 defaults write com.apple.DiskUtility advanced-image-options -bool true
 
-echo "Mac App Store preferences"
+echo "Configuring Mac App Store preferences"
 
 # Enable the WebKit Developer Tools in the Mac App Store
 defaults write com.apple.appstore WebKitDeveloperExtras -bool true
@@ -461,7 +444,6 @@ for app in "Activity Monitor" \
             "SystemUIServer"; do
     killall "${app}" > /dev/null 2>&1
 done
-
 
 # ==================================================================
 # MANUAL
