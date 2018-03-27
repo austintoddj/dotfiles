@@ -37,7 +37,6 @@
 - Calendar
 - YummyFTP
   - Link bookmarks to Dropbox Apps
-- MacDown
 - Sublime
   - Install the Package Manager
   - Install Material theme in Packages/Material Theme/schemes/Material-Theme.tmTheme
