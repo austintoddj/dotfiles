@@ -9,14 +9,10 @@ This repository contains automated setup scripts for my preferred tools and dev-
 
 > **Warning:** If you want to give this setup a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what they entail. *Use at your own risk!*
 
-## Usage
-
-* Clone this repository
-* Add the `scripts` directory to your path
-
 ```sh
-SHELL_SCRIPTS_PATH="{where you cloned this repo}/scripts"		
-export PATH="$SHELL_SCRIPTS_PATH:$PATH"
+usage:
+    SHELL_SCRIPTS_PATH="{where you cloned this repo}/scripts"		
+    export PATH="$SHELL_SCRIPTS_PATH:$PATH"
 
 available commands:
     setup           Run the installer and configure system
