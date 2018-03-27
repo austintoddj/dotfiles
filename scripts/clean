@@ -24,13 +24,11 @@ do
   fi
 done
 
-
 # ==================================================================
 # PROCESSES
 # ==================================================================
 
 killall node || true
-
 
 # ==================================================================
 # ARTIFACTS
@@ -46,7 +44,6 @@ find "$HOME" -name '.DS_Store' -delete
 
 # Clear the Downloads directory
 rm -rf "$HOME"/Downloads/*
-
 
 # ==================================================================
 # REPO BRANCHES
@@ -73,7 +70,6 @@ deep-git-prune ()
 cd "$HOME/Sites"
 
 for i in */.git; do ( echo $i; cd $i/..; deep-git-prune; ); done
-
 
 # ==================================================================
 # REPO STATES
