@@ -17,4 +17,9 @@ This repository contains automated setup scripts for my preferred tools and dev-
 ```sh
 SHELL_SCRIPTS_PATH="{where you cloned this repo}/scripts"		
 export PATH="$SHELL_SCRIPTS_PATH:$PATH"
+
+available commands:
+    setup           Run the initial setup
+    update          Run all updates
+    clean           Purge and prune old data
 ```
