@@ -90,10 +90,7 @@ for app in "${apps[@]}"; do
   mas install "$app"
 done
 
-echo "Installing fonts"
-for font in $(find "./fonts" -depth 1 -exec basename {} \;); do
-  cp -R "$(pwd)/fonts/$font" "$HOME/Library/Fonts/"
-done
+bash ~/Sites/dev-setup/fonts/index
 
 # ==================================================================
 # MACOS
@@ -192,7 +189,7 @@ defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Finder: show all filename extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+defaults write NSGlobalDomain AppleShowAllExtensions -bool false
 
 # Finder: show status bar
 defaults write com.apple.finder ShowStatusBar -bool true

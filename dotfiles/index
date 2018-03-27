@@ -1,9 +1,7 @@
 echo "Creating dotfiles"
 
-# Create a backup directory
 mkdir -pv ~/.dev-backups
 
-# Copy existing files and delete the originals
 [[ -e ~/.bash_profile ]] && cp -r ~/.bash_profile ~/.dev-backups/.bash_profile && rm ~/.bash_profile
 [[ -e ~/.bashrc ]] && cp -r ~/.bashrc ~/.dev-backups/.bashrc && rm ~/.bashrc
 [[ -e ~/.curlrc ]] && cp -r ~/.curlrc ~/.dev-backups/.curlrc && rm ~/.curlrc
@@ -15,7 +13,6 @@ mkdir -pv ~/.dev-backups
 [[ -e ~/.vim ]] && cp -r ~/.vim ~/.dev-backups/.vim && rm -rf ~/.vim
 [[ -e ~/.vimrc ]] && cp -r ~/.vimrc ~/.dev-backups/.vimrc && rm ~/.vimrc
 
-# Create the files
 for file in $(find "$HOME/Sites/dev-setup/dotfiles/files" -depth 1 -exec basename {} \;); do
   cp -r "$HOME/Sites/dev-setup/dotfiles/files/$file" "$HOME/$file"
 done
