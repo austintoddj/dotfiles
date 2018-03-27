@@ -1,1 +1,43 @@
-m
+# Mobile setup (iPhone)
+- Settings
+  - Sign in with Apple ID
+  - Text message forwarding to desktop
+  - Send as SMS when iMessage is unavailable
+  - Don't store passwords in Safari
+  - Restrictions (off)
+  - Cellular enable everything
+  - Turn off predictive keyboard
+- App organization
+  - Dock
+    - Phone, Inbox, Safari, Spotify
+  - Screen 1
+    - Messages, Calendar, Flickr, Camera, Dark Sky, Google Maps, Clock, YouTube, Facebook, Twitter, Instagram, LinkedIn, Messenger, Reddit, Dropbox, Slack, 1Password, Google Authenticator, Microsoft Authenticator, Photos, App Store, Notes, Reminders, Settings
+  - Screen 2
+    - Folder: Design
+      - PS Express, Photoshop Fix, Photoshop Mix, Phonto
+    - Folder: Development
+      - Analytics, CodeHub, Prompt, Transmit
+    - Folder: Entertainment
+      - Netflix, Facebook Page, Remote, TV
+    - Folder: Food
+      - Chick-fil-A, Chipotle, Jimmy John's, Starbucks
+    - Folder: Gaming
+      - Halo Channel, IGN, Pokemon Go, Xbox
+    - Folder: iOS
+    - Folder: Misc
+      - Drive Safe & Save, MyFitnessPal, TCF Bank
+    - Folder: Network
+      - Fing, Scany, Speedtest
+    - Folder: Shop
+      - 1-800 Contacts, Amazon, Best Buy, FedEx, Target, Walmart
+- Widgets (Weather, Up Next)
+- Delete unused stock apps
+- Clock
+  - Set up alarms
+- Find iPhone
+  - Turn on Send Last Location
+- Health
+  - Set up profile and medical ID
+  - Blood type O+
+- Wallet
+  - Add debit card for Apple Pay
