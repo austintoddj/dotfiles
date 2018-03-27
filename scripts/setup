@@ -15,10 +15,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # DOTFILES
 # ==================================================================
 
-cd ~/Sites/dev-setup/dotfiles/files
-./index
-
-cd ~
+bash ~/Sites/dev-setup/dotfiles/index
 
 # ==================================================================
 # PACKAGES
