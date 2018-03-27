@@ -19,7 +19,7 @@ SHELL_SCRIPTS_PATH="{where you cloned this repo}/scripts"
 export PATH="$SHELL_SCRIPTS_PATH:$PATH"
 
 available commands:
-    setup           Run the initial setup
-    update          Run all updates
-    clean           Purge and prune old data
+    setup           Run the installer and configure system
+    update          Update packages and apps
+    clean           Purge caches and prune repos
 ```
