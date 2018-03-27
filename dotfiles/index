@@ -16,6 +16,6 @@ mkdir -pv ~/.dev-backups
 [[ -e ~/.vimrc ]] && cp -r ~/.vimrc ~/.dev-backups/.vimrc && rm ~/.vimrc
 
 # Create the files
-for file in $(find "./files" -depth 1 -exec basename {} \;); do
-  cp -r "$(pwd)/files/$file" "$HOME/$file"
+for file in $(find "$HOME/Sites/dev-setup/dotfiles/files" -depth 1 -exec basename {} \;); do
+  cp -r "$HOME/Sites/dev-setup/dotfiles/files/$file" "$HOME/$file"
 done
