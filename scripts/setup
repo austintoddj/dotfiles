@@ -15,7 +15,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # DOTFILES
 # ==================================================================
 
-cd ~/Sites/dev-setup/files
+cd ~/Sites/dev-setup/dotfiles/files
 ./index
 
 cd ~
@@ -68,13 +68,10 @@ echo "Installing Homebrew cask apps"
 
 brew_casks=(
   "1password"
-  "adobe-creative-cloud"
   "bettertouchtool"
   "cleanmymac"
   "dropbox"
   "google-chrome"
-  "macdown"
-  "navicat-premium-essentials"
   "phpstorm"
   "sequel-pro"
   "slack"
