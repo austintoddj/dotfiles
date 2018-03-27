@@ -1,6 +1,10 @@
 [user]
     name = Todd Austin
     email = austin.todd.j@gmail.com
+    signingkey =
+
+[commit]
+    gpgsign = true
 
 [alias]
     # View a descriptive, preferred format of the Git log

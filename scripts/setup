@@ -49,6 +49,7 @@ echo "Installing Homebrew packages"
 
 homebrew_packages=(
   "git-flow-avh"
+  "gpg"
   "mas"
   "mysql"
   "sqlite"
@@ -59,16 +60,13 @@ for homebrew_package in "${homebrew_packages[@]}"; do
   brew install "$homebrew_package"
 done
 
-echo "Installing NPM"
-npm install npm@latest -g
-
 # ==================================================================
 # APPS / FONTS
 # ==================================================================
 
 echo "Installing Homebrew cask apps"
 
-homebrew_cask_packages=(
+brew_casks=(
   "1password"
   "adobe-creative-cloud"
   "bettertouchtool"
@@ -84,23 +82,23 @@ homebrew_cask_packages=(
   "sublime-text"
   "yummy-ftp"
 )
-for homebrew_cask_package in "${homebrew_cask_packages[@]}"; do
-  brew cask install "$homebrew_cask_package"
+for cask in "${brew_casks[@]}"; do
+  brew cask install "$cask"
 done
 
 echo "Installing Mac App Store apps"
 
-mac_app_store_apps=(
+apps=(
   "615916400" # BrowseShot
   "523620159" # CleanMyDrive 2
 )
-for mac_app_store_app in "${mac_app_store_apps[@]}"; do
-  mas install "$mac_app_store_app"
+for app in "${apps[@]}"; do
+  mas install "$app"
 done
 
 echo "Installing fonts"
 for font in $(find "./fonts" -depth 1 -exec basename {} \;); do
-  cp -R "$(pwd)/fonts/$font" "~/Library/Fonts/"
+  cp -R "$(pwd)/fonts/$font" "$HOME/Library/Fonts/"
 done
 
 # ==================================================================
