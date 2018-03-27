@@ -1,1 +1,107 @@
-d
+# Desktop setup
+- Dropbox
+  - Start Dropbox on system startup (on)
+  - Enable Finder integration (on)
+  - Dropbox folder location (austintoddj)
+- 1Password
+  - Import existing vault from Dropbox
+  - Always keep 1Password mini running (on)
+  - Show mini app icon in the menu bar (on)
+  - Use rich icons (on)
+  - Show item count in the sidebar (on)
+- iCloud
+  - Enable everything except (Back to My Mac)
+- Delete unused factory Applications
+- Notification center widgets (Calendar)
+- Users
+  - Add avatar
+  - Login items (BetterTouchTool, Dropbox)
+- Finder
+  - New Finder windows show (austintoddj)
+  - Open folders in new tabs instead of windows (off)
+  - Favorites (iCloud Drive, Applications, Desktop, Sites, Documents, Dropbox, austintoddj)
+  - Show all filename extensions (off)
+  - Show warning before changing an extension (off)
+  - Show warning before removing from iCloud Drive (on)
+  - Show warning before emptying the Trash (on)
+  - Correct spelling automatically (off)
+  - Remove items from the Trash after 30 days (off)
+  - Keep folders on top when sorting by name (off)
+- Safari
+  - Extensions
+    - Confirm install (1Password, Adblock Plus)
+- Chrome
+  - Import bookmarks from Safari
+  - Extensions
+    - Confirm install (1Password, Adblock Plus)
+- Calendar
+- YummyFTP
+  - Link bookmarks to Dropbox Apps
+- MacDown
+- Sublime
+  - Install the Package Manager
+  - Install Material theme in Packages/Material Theme/schemes/Material-Theme.tmTheme
+  - Replace the contents of Preferences.sublime-settings, Distraction Free.sublime-settings
+  - Install packages
+  - Restart Sublime
+  - Enter license
+- PhpStorm
+  - Install Material Theme UI in Settings > Preferences > Plugins > Browse Repositories
+  - Restart PHPStorm
+  - IDE theme (not the code color scheme) can be changed in Tools > Material Theme
+  - Install packages
+  - Enter license
+- Xcode
+- Sequel Pro
+  - Import bookmarks
+  - Import Absent (rainglow) theme
+- Navicat
+  - Enter license
+  - Sign in
+- Terminal
+  - Open Terminal > Settings and import the Solarized Dark ansi.terminal theme
+  - Update Font/Cursor/Startup as needed
+  - New window with profile (Solarized)
+  - Shells open with (Default login shell)
+  - New windows open with (Default Profile, Default Working Directory)
+  - New tabs open with (Same Profile, Default Working Directory)
+  - Use high-contrast I beam (on)
+  - Font (Operator Mono Book 11pt)
+  - Text
+    - Antialias text (on)
+    - Use bold fonts (off)
+    - Allow blinking text (off)
+    - Display ANSI colors (on)
+    - Use bright colors for bold text (on)
+  - Cursor
+    - Block (on)
+    - Underline (off)
+    - Vertical Bar (off)
+    - Blink cursor (on)
+  - Window Size
+    - Columns (130)
+    - Rows (45)
+- Photoshop
+  - Sign in with Adobe Creative Cloud
+- Pages
+- Keynote
+- Numbers
+- Notes
+- Slack
+  - Sign in to workspace (cnvs-io, t2d)
+  - Configure downloads to Desktop
+- Messages
+  - Text Message Forwarding (on, from iPhone)
+- Spotify
+  - Sign in
+  - Highest quality of streaming and downloads
+- App Store
+  - Automatically check for updates (on)
+  - Download newly available updates in the background (off)
+  - Install app updates (off)
+  - Install macOS updates (off)
+  - Install system data files and security updates (off)
+- 1Password
+  - Already done ^
+- Github
+  - Set up SSH keys
