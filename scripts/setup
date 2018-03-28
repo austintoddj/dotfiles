@@ -32,8 +32,8 @@ echo "Installing Composer packages"
 composer_packages=(
   "laravel/valet"
 )
-for composer_package in "${composer_packages[@]}"; do
-  composer global require "$composer_package"
+for package in "${composer_packages[@]}"; do
+  composer global require "$package"
 done
 
 echo "Installing Laravel Valet"
@@ -53,8 +53,8 @@ homebrew_packages=(
   "tldr"
   "yarn"
 )
-for homebrew_package in "${homebrew_packages[@]}"; do
-  brew install "$homebrew_package"
+for package in "${homebrew_packages[@]}"; do
+  brew install "$package"
 done
 
 # ==================================================================
@@ -63,7 +63,7 @@ done
 
 echo "Installing Homebrew cask apps"
 
-brew_casks=(
+homebrew_casks=(
   "1password"
   "bettertouchtool"
   "cleanmymac"
@@ -74,19 +74,19 @@ brew_casks=(
   "slack"
   "spotify"
   "sublime-text"
-  "yummy-ftp"
 )
-for cask in "${brew_casks[@]}"; do
+for cask in "${homebrew_casks[@]}"; do
   brew cask install "$cask"
 done
 
 echo "Installing Mac App Store apps"
 
-apps=(
+mas_apps=(
   "615916400" # BrowseShot
   "523620159" # CleanMyDrive 2
+  "492068728" # YummyFTP
 )
-for app in "${apps[@]}"; do
+for app in "${mas_apps[@]}"; do
   mas install "$app"
 done
 

@@ -1,5 +1,3 @@
 echo "Installing fonts"
 
-for font in $(find "$HOME/Sites/dev-setup/fonts" -depth 1 -exec basename {} \;); do
-  cp -R "$HOME/Sites/dev-setup/fonts/$font" "$HOME/Library/Fonts/"
-done
+rsync -avz --quiet --exclude 'index' $HOME/Sites/dev-setup/fonts/* $HOME/Library/Fonts/
