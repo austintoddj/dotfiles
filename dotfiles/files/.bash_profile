@@ -112,46 +112,9 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     #   ------------------------------------------
     alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
 
-    #   emptytrash: Empty the Trash on all mounted volumes and the main HDD.
-    #               Also, clear Apple’s System Logs to improve shell startup speed.
-    #               Finally, clear download history from quarantine.
-    #   ------------------------------------------
-    # alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
-
     #   lr: Full Recursive Directory Listing
     #   ------------------------------------------
     alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
-
-    #   mans:   Search manpage given an argument '1' for term given in argument '2' (case insensitive)
-    #           Displays paginated result with colored search terms and two lines surrounding each hit.
-    #           Example: mans mplayer codec
-    #   --------------------------------------------------------------------
-    mans () {
-        man $1 | grep -iC2 --color=always $2 | less
-    }
-
-    #   showa: To remind yourself of an alias (given some part of it)
-    #   ------------------------------------------------------------
-    showa () { /usr/bin/grep --color=always -i -a1 $@ ~/Library/init/bash/aliases.bash | grep -v '^\s*$' | less -FSRXc ; }
-
-    #   calc:  Simple calculator
-    #   ---------------------------------------------------------
-    function calc() {
-        local result="";
-        result="$(printf "scale=10;$*\n" | bc --mathlib | tr -d '\\\n')";
-        #                       └─ default (when `--mathlib` is used) is 20
-        #
-        if [[ "$result" == *.* ]]; then
-            # improve the output for decimal numbers
-            printf "$result" |
-            sed -e 's/^\./0./'        `# add "0" for cases like ".5"` \
-                -e 's/^-\./-0./'      `# add "0" for cases like "-.5"`\
-                -e 's/0*$//;s/\.$//';  # remove trailing zeros
-        else
-            printf "$result";
-        fi;
-        printf "\n";
-    }
 
 #   -------------------------------
 #   3. FILE AND FOLDER MANAGEMENT
@@ -265,8 +228,6 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   7. SYSTEMS OPERATIONS & INFORMATION
 #   ---------------------------------------
 
-    alias mountReadWrite='/sbin/mount -uw /'    # mountReadWrite:   For use when booted into single-user
-
     #   cleanupDS:  Recursively delete .DS_Store files
     #   -------------------------------------------------------------------
     alias cleanupDS="find . -type f -name '*.DS_Store' -ls -delete"
@@ -282,8 +243,6 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     #   Laravel Framework
     #   -------------------------------------------------------------------
     alias wipe='php artisan clear-compiled;php artisan view:clear;php artisan cache:clear;php artisan config:clear;php artisan route:clear;composer dumpautoload'
-    alias clearLog='> ./storage/logs/laravel.log'           # clearLog:         Clear the log (Laravel)
-    alias viewLog='cat ./storage/logs/laravel.log'          # viewLog:          View the log (Laravel)
 
     #   Gulp
     #   -------------------------------------------------------------------
@@ -292,23 +251,6 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     #   PHPUnit
     #   -------------------------------------------------------------------
     alias pu='vendor/bin/phpunit'                           # pu:               Run PHPUnit from current directory (Laravel)
-
-    #   Apache Web Server
-    #   -------------------------------------------------------------------
-    alias apacheEdit='sudo edit /etc/httpd/httpd.conf'      # apacheEdit:       Edit httpd.conf
-    alias apacheRestart='sudo apachectl graceful'           # apacheRestart:    Restart Apache
-    alias apacheLogs="less +F /var/log/apache2/error_log"   # Apachelogs:       Shows apache error logs
-    alias herr='tail /var/log/httpd/error_log'              # herr:             Tails HTTP error logs
-
-    #   Miscellaneous
-    #   -------------------------------------------------------------------
-    httpHeaders () { /usr/bin/curl -I -L $@ ; }             # httpHeaders:      Grabs headers from web page
-    alias editHosts='sudo edit /etc/hosts'                  # editHosts:        Edit /etc/hosts file
-    alias record='asciinema rec'                            # record:           Record a Terminal Session with Asciinema
-
-    #   httpDebug:  Download a web page and show info on what took time
-    #   -------------------------------------------------------------------
-    httpDebug () { /usr/bin/curl $@ -o /dev/null -w "dns: %{time_namelookup} connect: %{time_connect} pretransfer: %{time_pretransfer} starttransfer: %{time_starttransfer} total: %{time_total}\n" ; }
 
 #   ---------------------------------------
 #   9. Server Security & Cleanup
@@ -325,14 +267,6 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   ---------------------------------------
 #   10. REMINDERS & NOTES
 #   ---------------------------------------
-
-    #   remove_disk: Spin down unneeded disk
-    #   ---------------------------------------
-    #   diskutil eject /dev/disk1s3
-
-    #   To change the password on an encrypted disk image:
-    #   ---------------------------------------
-    #   hdiutil chpass /path/to/the/diskimage
 
     #   To make a backup from one drive to another:
     #   ---------------------------------------
