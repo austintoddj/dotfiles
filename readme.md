@@ -3,8 +3,6 @@
 </p>
 
 
-—
-
 I've always enjoyed watching developers work. Which editor do they use? Do they prefer Terminal or iTerm? Are they using a virtual machine? If only in small pieces, I've learned from every developer I've ever worked with.
 
 This repository contains automated setup scripts for my preferred tools and dev-based macOS defaults.
