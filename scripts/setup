@@ -85,7 +85,7 @@ mas_apps=(
   "615916400" # BrowseShot
   "523620159" # CleanMyDrive 2
   "497799835" # Xcode
-  "492068728" # YummyFTP
+  #"492068728" # YummyFTP
 )
 for app in "${mas_apps[@]}"; do
   mas install "$app"
