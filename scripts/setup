@@ -30,6 +30,7 @@ mv composer.phar /usr/local/bin/composer
 
 echo "Installing Composer packages"
 composer_packages=(
+  "laravel/installer"
   "laravel/valet"
 )
 for package in "${composer_packages[@]}"; do
