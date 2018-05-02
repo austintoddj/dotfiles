@@ -71,6 +71,7 @@ homebrew_casks=(
   "dropbox"
   "google-chrome"
   "phpstorm"
+  "postman"
   "sequel-pro"
   "slack"
   "spotify"
