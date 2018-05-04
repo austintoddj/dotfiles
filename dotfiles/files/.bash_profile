@@ -39,6 +39,10 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     source ~/.git-prompt.sh
     export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[01;31m\]$(__git_ps1 "(%s)")\[\033[00m\]\$ '
 
+    if [ -f ~/.git-completion.bash ]; then
+        . ~/.git-completion.bash
+    fi
+
     #   Set Default Editor (change 'Vim' to the editor of your choice)
     #   ------------------------------------------------------------
     export EDITOR=/usr/bin/vim
