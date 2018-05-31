@@ -20,7 +20,7 @@ brew cask upgrade
 
 # COMPOSER
 echo "Updating Composer"
-sudo composer self-update
+composer self-update
 
 echo "Updating Composer packages"
 composer global update
