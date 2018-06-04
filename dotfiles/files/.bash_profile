@@ -108,7 +108,7 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
     alias sudo='sudo '                          # sudo:         Enable aliases to be sudo’ed
 
-    trash () { command mv "$@" ~/.Trash ; }     # trash:    Moves a file to the MacOS trash
+    trash () { command mv "$@" ~/.Trash ; }     # trash: Moves a file to the macOS trash
     md() { mkdir -p "$@" && cd "$@" ; }         # Make a directory and enter it
     rd() { rm -rf "$@" ; }                      # Remove a directory and its files
 
@@ -124,8 +124,8 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   3. FILE AND FOLDER MANAGEMENT
 #   -------------------------------
 
-    zipf () { zip -r "$1".zip "$1" ; }          # zipf:         To create a ZIP archive of a folder
-    alias numFiles='echo $(ls -1 | wc -l)'      # numFiles:     Count of non-hidden files in current dir
+    zipf () { zip -r "$1".zip "$1" ; }          # zipf:     To create a ZIP archive of a folder
+    alias numFiles='echo $(ls -1 | wc -l)'      # numFiles: Count of non-hidden files in current dir
 
     #   extract:  Extract most know archives with one command
     #   ---------------------------------------------------------
@@ -154,12 +154,12 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   4. SEARCHING
 #   ---------------------------
 
-    alias qfind="find . -name "                 # qfind:    Quickly search for file
-    ff () { /usr/bin/find . -name "$@" ; }      # ff:       Find file under the current directory
-    ffs () { /usr/bin/find . -name "$@"'*' ; }  # ffs:      Find file whose name starts with a given string
-    ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:      Find file whose name ends with a given string
+    alias qfind="find . -name "                 # qfind: Quickly search for file
+    ff () { /usr/bin/find . -name "$@" ; }      # ff:    Find file under the current directory
+    ffs () { /usr/bin/find . -name "$@"'*' ; }  # ffs:   Find file whose name starts with a given string
+    ffe () { /usr/bin/find . -name '*'"$@" ; }  # ffe:   Find file whose name ends with a given string
 
-    #   spotlight: Search for a file using MacOS Spotlight's metadata
+    #   spotlight: Search for a file using macOS Spotlight's metadata
     #   -----------------------------------------------------------
     spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
 
@@ -203,16 +203,16 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   6. NETWORKING
 #   ---------------------------
 
-    alias myip='curl ipecho.net/plain; echo'           	# myip:         Public facing IP Address
-    alias netCons='lsof -i'                             # netCons:      Show all open TCP/IP sockets
-    alias flushDNS='dscacheutil -flushcache'            # flushDNS:     Flush out the DNS Cache
-    alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:        Display open sockets
-    alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'   # lsockU:       Display only open UDP sockets
-    alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'   # lsockT:       Display only open TCP sockets
-    alias ipInfo0='ipconfig getpacket en0'              # ipInfo0:      Get info on connections for en0
-    alias ipInfo1='ipconfig getpacket en1'              # ipInfo1:      Get info on connections for en1
-    alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:    All listening connections
-    alias showBlocked='sudo ipfw list'                  # showBlocked:  All ipfw rules inc/ blocked IPs
+    alias myip='curl ipecho.net/plain; echo'           	# myip:        Public facing IP Address
+    alias netCons='lsof -i'                             # netCons:     Show all open TCP/IP sockets
+    alias flushDNS='dscacheutil -flushcache'            # flushDNS:    Flush out the DNS Cache
+    alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:       Display open sockets
+    alias lsockU='sudo /usr/sbin/lsof -nP | grep UDP'   # lsockU:      Display only open UDP sockets
+    alias lsockT='sudo /usr/sbin/lsof -nP | grep TCP'   # lsockT:      Display only open TCP sockets
+    alias ipInfo0='ipconfig getpacket en0'              # ipInfo0:     Get info on connections for en0
+    alias ipInfo1='ipconfig getpacket en1'              # ipInfo1:     Get info on connections for en1
+    alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:   All listening connections
+    alias showBlocked='sudo ipfw list'                  # showBlocked: All ipfw rules inc/ blocked IPs
 
     #   ii:  display useful host related informaton
     #   -------------------------------------------------------------------
@@ -248,13 +248,9 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     #   -------------------------------------------------------------------
     alias wipe='php artisan clear-compiled;php artisan view:clear;php artisan cache:clear;php artisan config:clear;php artisan route:clear;composer dumpautoload'
 
-    #   Gulp
-    #   -------------------------------------------------------------------
-    alias gp='gulp --production'                            # gp:               Run Gulp --production (Laravel)
-
     #   PHPUnit
     #   -------------------------------------------------------------------
-    alias pu='vendor/bin/phpunit'                           # pu:               Run PHPUnit from current directory (Laravel)
+    alias pu='vendor/bin/phpunit'                           # pu: Run PHPUnit from current directory (Laravel)
 
 #   ---------------------------------------
 #   9. Server Security & Cleanup
@@ -266,7 +262,7 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 
     #   cleanup: Package cleanup and removal on Ubuntu server
     #   -----------------------------------------------------------
-    alias cleanup='sudo apt-get clean;sudo apt-get autoclean -y; sudo apt-get autoremove -y;'
+    alias cleanup='sudo apt clean;sudo apt autoclean -y; sudo apt autoremove -y;'
 
 #   ---------------------------------------
 #   10. REMINDERS & NOTES
