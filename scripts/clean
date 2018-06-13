@@ -37,6 +37,7 @@ killall node || true
 # Remove unused homebrew artifacts
 brew cleanup
 brew cask cleanup
+brew services cleanup
 brew prune
 
 # Remove .DS_Store files
