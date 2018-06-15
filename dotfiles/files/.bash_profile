@@ -31,8 +31,9 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 
     #   Set Paths
     #   ------------------------------------------------------------
-    export PATH=~/.composer/vendor/bin:$PATH
-    export PATH=~/Sites/dev-setup/scripts:$PATH
+    export PATH="~/.composer/vendor/bin:$PATH"
+    export PATH="~/Sites/dev-setup/scripts:$PATH"
+    export PATH="/usr/local/sbin:$PATH"
 
     #   Change Prompt
     #   ------------------------------------------------------------
