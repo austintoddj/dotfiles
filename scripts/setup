@@ -72,7 +72,6 @@ homebrew_casks=(
   "bettertouchtool"
   "cleanmymac"
   "dropbox"
-  "gpg-suite"
   "google-chrome"
   "phpstorm"
   "postman"
