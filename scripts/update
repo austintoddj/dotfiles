@@ -22,7 +22,7 @@ for cask in "${homebrew_casks[@]}"; do
   if [ "$cask" = "1password" ] || [ "$cask" = "bettertouchtool" ] ; then
     continue;
   fi
-  brew cu "$cask"
+  brew cu -f "$cask"
 done
 
 # COMPOSER
