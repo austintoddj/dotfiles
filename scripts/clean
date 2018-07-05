@@ -38,6 +38,7 @@ killall node || true
 brew cleanup
 brew cask cleanup
 brew services cleanup
+brew cu --cleanup
 brew prune
 
 # Remove .DS_Store files
