@@ -46,6 +46,9 @@ find "$HOME" -name '.DS_Store' -delete
 # Clear the Downloads directory
 rm -rf "$HOME"/Downloads/*
 
+# Empty the trash
+rm -rf "$HOME"/.Trash/*
+
 # ==================================================================
 # REPO BRANCHES
 # ==================================================================
