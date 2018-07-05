@@ -84,6 +84,8 @@ for cask in "${homebrew_casks[@]}"; do
   brew cask install "$cask"
 done
 
+brew tap buo/cask-upgrade
+
 echo "Installing Mac App Store apps"
 
 mas_apps=(
