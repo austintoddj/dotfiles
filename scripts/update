@@ -16,7 +16,14 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 echo "Updating Homebrew packages"
 brew update
 brew upgrade
-brew cask upgrade
+
+homebrew_casks=($(brew cask list))
+for cask in "${homebrew_casks[@]}"; do
+  if [ "$cask" = "1password" ] || [ "$cask" = "bettertouchtool" ] ; then
+    continue;
+  fi
+  brew cu "$cask"
+done
 
 # COMPOSER
 echo "Updating Composer"
