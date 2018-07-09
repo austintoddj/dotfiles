@@ -69,6 +69,7 @@ echo "Installing Homebrew cask apps"
 homebrew_casks=(
 # Brew installs 1Password 7 by default so manual installation is needed
 #  "1password"
+  "aerial"
   "bettertouchtool"
   "cleanmymac"
   "dropbox"
