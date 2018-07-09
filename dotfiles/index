@@ -1,18 +1,16 @@
 echo "Creating dotfiles"
 
-mkdir -pv ~/.dev-backups
+mkdir -pv $HOME/.dev-backups
 
-[[ -e ~/.bash_profile ]] && cp -r ~/.bash_profile ~/.dev-backups/.bash_profile && rm ~/.bash_profile
-[[ -e ~/.bashrc ]] && cp -r ~/.bashrc ~/.dev-backups/.bashrc && rm ~/.bashrc
-[[ -e ~/.curlrc ]] && cp -r ~/.curlrc ~/.dev-backups/.curlrc && rm ~/.curlrc
-[[ -e ~/.git-prompt.sh ]] && cp -r ~/.git-prompt.sh ~/.dev-backups/.git-prompt.sh && rm ~/.git-prompt.sh
-[[ -e ~/.gitattributes ]] && cp -r ~/.gitattributes ~/.dev-backups/.gitattributes && rm ~/.gitattributes
-[[ -e ~/.gitconfig ]] && cp -r ~/.gitconfig ~/.dev-backups/.gitconfig && rm ~/.gitconfig
-[[ -e ~/.gitignore ]] && cp -r ~/.gitignore ~/.dev-backups/.gitignore && rm ~/.gitignore
-[[ -e ~/.hushlogin ]] && cp -r ~/.hushlogin ~/.dev-backups/.hushlogin && rm ~/.hushlogin
-[[ -e ~/.vim ]] && cp -r ~/.vim ~/.dev-backups/.vim && rm -rf ~/.vim
-[[ -e ~/.vimrc ]] && cp -r ~/.vimrc ~/.dev-backups/.vimrc && rm ~/.vimrc
+[[ -e $HOME/.bash_profile ]] && cp -r $HOME/.bash_profile $HOME/.dev-backups/.bash_profile && rm $HOME/.bash_profile
+[[ -e $HOME/.bashrc ]] && cp -r $HOME/.bashrc $HOME/.dev-backups/.bashrc && rm $HOME/.bashrc
+[[ -e $HOME/.curlrc ]] && cp -r $HOME/.curlrc $HOME/.dev-backups/.curlrc && rm $HOME/.curlrc
+[[ -e $HOME/.git-prompt.sh ]] && cp -r $HOME/.git-prompt.sh $HOME/.dev-backups/.git-prompt.sh && rm $HOME/.git-prompt.sh
+[[ -e $HOME/.gitattributes ]] && cp -r $HOME/.gitattributes $HOME/.dev-backups/.gitattributes && rm $HOME/.gitattributes
+[[ -e $HOME/.gitconfig ]] && cp -r $HOME/.gitconfig $HOME/.dev-backups/.gitconfig && rm $HOME/.gitconfig
+[[ -e $HOME/.gitignore ]] && cp -r $HOME/.gitignore $HOME/.dev-backups/.gitignore && rm $HOME/.gitignore
+[[ -e $HOME/.hushlogin ]] && cp -r $HOME/.hushlogin $HOME/.dev-backups/.hushlogin && rm $HOME/.hushlogin
+[[ -e $HOME/.vim ]] && cp -r $HOME/.vim $HOME/.dev-backups/.vim && rm -rf $HOME/.vim
+[[ -e $HOME/.vimrc ]] && cp -r $HOME/.vimrc $HOME/.dev-backups/.vimrc && rm $HOME/.vimrc
 
-for file in $(find "$HOME/Sites/dev-setup/dotfiles/files" -depth 1 -exec basename {} \;); do
-  cp -r "$HOME/Sites/dev-setup/dotfiles/files/$file" "$HOME/$file"
-done
+rsync -avz --quiet $HOME/Sites/dev-setup/dotfiles/files/* $HOME/
