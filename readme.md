@@ -14,7 +14,7 @@ usage:
     export PATH="$SHELL_SCRIPTS_PATH:$PATH"
 
 available commands:
-    setup           Run the installer and configure system
-    update          Update packages and apps
-    clean           Purge caches and prune repos
+    setup           Run the installer and system configuration
+    update          Update all packages and apps
+    clean           Purge caches and prune git repos
 ```
