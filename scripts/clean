@@ -36,7 +36,6 @@ killall node || true
 
 # Remove unused homebrew artifacts
 brew cleanup
-brew cask cleanup
 brew services cleanup
 brew cu --cleanup
 brew prune
