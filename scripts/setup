@@ -48,6 +48,7 @@ homebrew_packages=(
   "mas"
   "mysql"
   "sqlite"
+  "speedtest-cli"
   "tldr"
   "yarn"
 )
