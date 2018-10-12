@@ -246,6 +246,12 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   8. WEB DEVELOPMENT
 #   ---------------------------------------
 
+	#   Local Package Development
+    #   -------------------------------------------------------------------
+    composer-link() {
+        composer config repositories.local '{"type": "path", "url": "'$1'"}' --file composer.json
+    }
+
     #   Laravel Framework
     #   -------------------------------------------------------------------
     alias wipe='php artisan clear-compiled;php artisan view:clear;php artisan cache:clear;php artisan config:clear;php artisan route:clear;composer dumpautoload'
