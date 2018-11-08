@@ -43,6 +43,7 @@ echo "Installing Homebrew"
 echo "Installing Homebrew packages"
 
 homebrew_packages=(
+  "bat"
   "git-flow-avh"
   "gpg"
   "mas"
