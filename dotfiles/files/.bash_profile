@@ -101,6 +101,7 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     alias cp='cp -iv'                           # Preferred 'cp' implementation
     alias mv='mv -iv'                           # Preferred 'mv' implementation
     alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
+    cat() { bat "$@" ; }                        # Preferred 'cat' implementation
     alias edit='subl'                           # edit:         Opens any file in sublime editor
     alias f='open -a Finder ./'                 # f:            Opens current directory in macOS Finder
     alias c='clear'                             # c:            Clear terminal display
@@ -216,7 +217,7 @@ COL_RESET=$ESC_SEQ"39;49;00m"
     alias openPorts='sudo lsof -i | grep LISTEN'        # openPorts:   All listening connections
     alias showBlocked='sudo ipfw list'                  # showBlocked: All ipfw rules inc/ blocked IPs
 
-    #   ii:  display useful host related informaton
+    #   ii:  display useful host related information
     #   -------------------------------------------------------------------
     ii() {
         echo -e "\n${COL_GREEN}You are currently logged in to:$COL_RESET " ; echo -e $HOSTNAME
