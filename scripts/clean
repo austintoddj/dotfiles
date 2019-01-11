@@ -22,7 +22,6 @@ killall node || true
 brew cleanup
 brew services cleanup
 brew cu --cleanup
-brew prune
 
 # Remove .DS_Store files
 find "$HOME" -name '.DS_Store' -delete
