@@ -18,3 +18,8 @@ available commands:
     update          Update all packages and apps
     clean           Purge caches and prune git repos
 ```
+
+## Thanks to...
+- Mathias Bynens and his [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
+- Nicolas Gallaghar and his [dotfiles repository](https://github.com/necolas/dotfiles)
+- Trevor Miller and his [dotfiles repository](https://github.com/trevordmiller/dotfiles)
