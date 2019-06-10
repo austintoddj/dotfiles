@@ -19,8 +19,6 @@ available commands:
     clean           Purge caches and prune git repos
 ```
 
-—
-
 ## Thanks to...
 - Mathias Bynens and his [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
 - Nicolas Gallaghar and his [dotfiles repository](https://github.com/necolas/dotfiles)
