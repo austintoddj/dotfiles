@@ -65,17 +65,22 @@ echo "Installing Homebrew cask apps"
 
 homebrew_casks=(
   "1password"
-  "aerial"
+  "authy"
   "bettertouchtool"
   "cleanmymac"
   "dropbox"
+  "firefox"
   "google-chrome"
-  "navicat-premium-essentials"
+  "macdown"
   "phpstorm"
   "postman"
+  "sequel-pro-nightly"
   "slack"
   "spotify"
   "sublime-text"
+  "tableplus"
+  "transmit"
+  "zoomus"
 )
 for cask in "${homebrew_casks[@]}"; do
   brew cask install "$cask"
@@ -86,10 +91,8 @@ brew tap buo/cask-upgrade
 echo "Installing Mac App Store apps"
 
 mas_apps=(
-  "615916400" # BrowseShot
   "523620159" # CleanMyDrive 2
   "497799835" # Xcode
-  "492068728" # YummyFTP Pro
 )
 for app in "${mas_apps[@]}"; do
   mas install "$app"
