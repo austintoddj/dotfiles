@@ -101,7 +101,7 @@ done
 bash $HOME/Sites/dev-setup/fonts/index
 
 # ==================================================================
-# MACOS
+# macOS
 # ==================================================================
 
 echo "Configuring general UI/UX"
