@@ -48,6 +48,7 @@ homebrew_packages=(
   "gpg"
   "mas"
   "mysql"
+  "neofetch"
   "sqlite"
   "speedtest-cli"
   "tldr"
