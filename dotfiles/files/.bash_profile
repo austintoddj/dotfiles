@@ -207,6 +207,7 @@ COL_RESET=$ESC_SEQ"39;49;00m"
 #   ---------------------------
 
     alias myip='curl https://ipinfo.io/ip'           	# myip:        Public facing IP Address
+    alias sys='ii && neofetch'                          # sys:         Display system and network info
     alias netCons='lsof -i'                             # netCons:     Show all open TCP/IP sockets
     alias flushDNS='dscacheutil -flushcache'            # flushDNS:    Flush out the DNS Cache
     alias lsock='sudo /usr/sbin/lsof -i -P'             # lsock:       Display open sockets
