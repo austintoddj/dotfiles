@@ -36,7 +36,7 @@ tldr --update
 # MAC APP STORE
 # ==================================================================
 
-echo "Upgrading Mac App Store apps"
+echo "Upgrading App Store apps"
 mas upgrade
 
 # ==================================================================
