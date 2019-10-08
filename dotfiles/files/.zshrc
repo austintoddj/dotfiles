@@ -1,80 +1,107 @@
-# Define color variables for output
-ESC_SEQ="\x1b["
-COL_RED=$ESC_SEQ"31;01m"
-COL_CYAN=$ESC_SEQ"36;01m"
-COL_GREEN=$ESC_SEQ"32;01m"
-COL_YELLOW=$ESC_SEQ"33;01m"
-COL_MAGENTA=$ESC_SEQ"35;01m"
-COL_RESET=$ESC_SEQ"39;49;00m"
-
-# Set Paths
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 export GPG_TTY=$(tty)
 export PATH="$HOME/bin:$PATH";
 export PATH="/usr/local/sbin:$PATH"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export PATH="$HOME/Sites/dev-setup/scripts:$PATH"
 
-# Change Prompt
-source $HOME/.git-prompt.sh
-export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\033[01;31m\]$(__git_ps1 "(%s)")\[\033[00m\]\$ '
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/todd/.oh-my-zsh"
 
-if [ -f $HOME/.git-completion.bash ]; then
-    . $HOME/.git-completion.bash
-fi
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
-# Set Default Editor (change 'Vim' to the editor of your choice)
-export EDITOR=/usr/bin/vim
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
-# Set default blocksize for ls, df, du
-export BLOCKSIZE=1k
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
 
-# Set Colors
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxBxegedabagaced
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
 
-force_color_prompt=yes
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
 
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-    # We have color support; assume it's compliant with Ecma-48
-    # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-    # a case would tend to support setf rather than setaf.)
-    color_prompt=yes
-    else
-    color_prompt=
-    fi
-fi
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
 
-# Enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r $HOME/.dircolors && eval "$(dircolors -b $HOME/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
 
-# Go back 1 directory level
-alias ..='cd ../'
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
 
-# Go back 2 directory levels
-alias ...='cd ../../'
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
 
-# Go back 3 directory levels
-alias .3='cd ../../../'
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
 
-# Go back 4 directory levels
-alias .4='cd ../../../../'
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
 
-# Go back 5 directory levels
-alias .5='cd ../../../../../'
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Go back 6 directory levels
-alias .6='cd ../../../../../../'
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
 
-# Go to the Home Directory
-alias ~='cd ~'
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Go to the Sites Directory
 alias s='cd ~/Sites'
@@ -109,9 +136,6 @@ alias which='type -all'
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-# Display bash options settings
-alias show_options='shopt'
-
 # Pipe content to file on MacOS Desktop
 alias DT='tee $HOME/Desktop/terminalOut.txt'
 
@@ -119,13 +143,7 @@ alias DT='tee $HOME/Desktop/terminalOut.txt'
 alias sudo='sudo '
 
 # Moves a file to the macOS trash
-trash () { command mv "$@" $HOME/.Trash ; }
-
-# Make a directory and enter it
-md() { mkdir -p "$@" && cd "$@" ; }
-
-# Remove a directory and its files
-rd() { rm -rf "$@" ; }
+trash() { command mv "$@" $HOME/.Trash ; }
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
@@ -134,13 +152,13 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 alias lr='ls -R | grep ":$" | sed -e '\''s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
 
 # To create a ZIP archive of a folder
-zipf () { zip -r "$1".zip "$1" ; }
+zipf() { zip -r "$1".zip "$1" ; }
 
 # Count of non-hidden files in current dir
 alias numFiles='echo $(ls -1 | wc -l)'
 
 # Extract most know archives with one command
-extract () {
+extract() {
     if [ -f $1 ] ; then
       case $1 in
         *.tar.bz2)   tar xjf $1     ;;
@@ -168,16 +186,16 @@ alias qfind="find . -name "
 ff () { /usr/bin/find . -name "$@" ; }
 
 # Find file whose name starts with a given string
-ffs () { /usr/bin/find . -name "$@"'*' ; }
+ffs() { /usr/bin/find . -name "$@"'*' ; }
 
 # Find file whose name ends with a given string
-ffe () { /usr/bin/find . -name '*'"$@" ; }
+ffe() { /usr/bin/find . -name '*'"$@" ; }
 
 # Search for a file using macOS Spotlight's metadata
-spotlight () { mdfind "kMDItemDisplayName == '$@'wc"; }
+spotlight() { mdfind "kMDItemDisplayName == '$@'wc"; }
 
 # Find out the pid of a specified process
-findPid () { lsof -t -c "$@" ; }
+findPid() { lsof -t -c "$@" ; }
 
 # Find memory hogs
 alias memHogsTop='top -l 1 -o rsize | head -20'

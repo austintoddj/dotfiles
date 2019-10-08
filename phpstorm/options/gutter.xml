@@ -1,0 +1,19 @@
+<application>
+  <component name="LineMarkerSettings">
+    <option name="providers">
+      <map>
+        <entry key="com.intellij.execution.lineMarker.RunLineMarkerProvider" value="true" />
+        <entry key="com.intellij.lang.javascript.highlighting.JSRecursiveCallLineMarkerProvider" value="true" />
+        <entry key="com.intellij.sql.editor.SqlLineMarkerProvider" value="true" />
+        <entry key="com.intellij.ui.ColorLineMarkerProvider" value="true" />
+        <entry key="com.intellij.ws.http.request.codeInsight.HttpRequestDiffLineMarkerProvider" value="true" />
+        <entry key="com.jetbrains.php.codeInsight.PhpRecursiveCallLineMarkerProvider" value="true" />
+        <entry key="com.jetbrains.php.lang.PhpLineMarkerProvider" value="true" />
+        <entry key="js.implemented" value="true" />
+        <entry key="js.implementing" value="true" />
+        <entry key="js.overridden" value="true" />
+        <entry key="js.overriding" value="true" />
+      </map>
+    </option>
+  </component>
+</application>
