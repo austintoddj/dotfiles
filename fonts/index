@@ -1,3 +1,5 @@
-echo "Installing fonts"
+#!/bin/zsh
+
+echo "Installing fonts..."
 
 rsync -avz --quiet --exclude 'index' $HOME/Sites/dev-setup/fonts/* $HOME/Library/Fonts/

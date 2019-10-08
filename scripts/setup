@@ -19,7 +19,7 @@ php -r "unlink('composer-setup.php');"
 sudo mkdir -p /usr/local/bin
 sudo mv composer.phar /usr/local/bin/composer
 
-echo "Installing Composer packages"
+echo "Installing Composer packages..."
 composer_packages=(
   "laravel/installer"
   "laravel/valet"
@@ -28,13 +28,13 @@ for package in "${composer_packages[@]}"; do
   composer global require "$package"
 done
 
-echo "Installing Laravel Valet"
+echo "Installing Laravel Valet..."
 valet install
 
-echo "Installing Homebrew"
+echo "Installing Homebrew..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-echo "Installing Homebrew packages"
+echo "Installing Homebrew packages..."
 
 homebrew_packages=(
   "bat"
@@ -58,7 +58,7 @@ done
 # APPS / FONTS
 # ==================================================================
 
-echo "Installing Homebrew cask apps"
+echo "Installing Homebrew cask apps..."
 
 homebrew_casks=(
   "1password"
@@ -78,29 +78,31 @@ homebrew_casks=(
   "transmit"
   "zoomus"
 )
+
 for cask in "${homebrew_casks[@]}"; do
   brew cask install "$cask"
 done
 
 brew tap buo/cask-upgrade
 
-echo "Installing Mac App Store apps"
+echo "Installing Mac App Store apps..."
 
 mas_apps=(
-  "523620159" # CleanMyDrive 2
-  "497799835" # Xcode
+  #"523620159" # CleanMyDrive 2
+  #"497799835" # Xcode
 )
+
 for app in "${mas_apps[@]}"; do
   mas install "$app"
 done
 
-bash $HOME/Sites/dev-setup/fonts/index
+zsh $HOME/Sites/dev-setup/fonts/index
 
 # ==================================================================
 # macOS
 # ==================================================================
 
-echo "Configuring general UI/UX"
+echo "Configuring general UI/UX..."
 
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
@@ -133,12 +135,12 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 # Disable the crash reporter
 defaults write com.apple.CrashReporter DialogType -string "none"
 
-echo "Optimizing SSD"
+echo "Optimizing SSD..."
 
 # Disable hibernation (speeds up entering sleep mode)
 sudo pmset -a hibernatemode 0
 
-echo "Configuring keyboard and inputs"
+echo "Configuring keyboard and inputs..."
 
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
@@ -157,7 +159,7 @@ defaults write NSGlobalDomain KeyRepeat -int 3
 # Set a shorter delay until key repeat
 defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
-echo "Configuring display and screen"
+echo "Configuring display and screen..."
 
 # Require password immediately after sleep or screen saver begins
 defaults write com.apple.screensaver askForPassword -int 1
@@ -172,7 +174,7 @@ defaults write com.apple.screencapture location -string "${HOME}/Desktop"
 # Save screenshots in PNG format (other options: BMP, GIF, JPG, PDF, TIFF)
 defaults write com.apple.screencapture type -string "png"
 
-echo "Configuring finder options"
+echo "Configuring finder options..."
 
 # Finder: disable window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
@@ -253,7 +255,7 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
     OpenWith -bool true \
     Privileges -bool true
 
-echo "Configuring dock, dashboard, and hot corners"
+echo "Configuring dock, dashboard, and hot corners..."
 
 # Remove all default icons from the dock
 defaults delete com.apple.dock persistent-apps
@@ -298,7 +300,7 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.a
 # Top left screen corner → Mission Control
 defaults write com.apple.dock wvous-tl-corner -int 2
 
-echo "Configuring Safari and WebKit"
+echo "Configuring Safari and WebKit..."
 
 # Privacy: don’t send search queries to Apple
 defaults write com.apple.Safari UniversalSearchEnabled -bool false
@@ -355,17 +357,17 @@ defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 # Always display the status bar
 defaults write com.apple.Safari ShowStatusBar -boolean true
 
-echo "Configuring Terminal.app settings"
+echo "Configuring Terminal.app settings..."
 
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-echo "Configuring Time Machine"
+echo "Configuring Time Machine..."
 
 # Prevent Time Machine from prompting to use new hard drives as backup volume
 defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 
-echo "Configuring Activity Monitor"
+echo "Configuring Activity Monitor..."
 
 # Show the main window when launching Activity Monitor
 defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
@@ -380,7 +382,7 @@ defaults write com.apple.ActivityMonitor ShowCategory -int 0
 defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 defaults write com.apple.ActivityMonitor SortDirection -int 0
 
-echo "Configuring TextEdit and Disk Utility"
+echo "Configuring TextEdit and Disk Utility..."
 
 # Use plain text mode for new TextEdit documents
 defaults write com.apple.TextEdit RichText -int 0
@@ -396,7 +398,7 @@ defaults write com.apple.TextEdit "TabWidth" '4'
 defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
 defaults write com.apple.DiskUtility advanced-image-options -bool true
 
-echo "Configuring Mac App Store preferences"
+echo "Configuring Mac App Store preferences..."
 
 # Enable the WebKit Developer Tools in the Mac App Store
 defaults write com.apple.appstore WebKitDeveloperExtras -bool true
@@ -425,7 +427,7 @@ defaults write com.apple.commerce AutoUpdate -bool true
 # Allow the App Store to reboot machine on macOS updates
 defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 
-echo "Resetting affected applications"
+echo "Resetting affected applications..."
 
 for app in "Activity Monitor" \
             "Dock" \
