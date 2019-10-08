@@ -130,9 +130,6 @@ alias f='open -a Finder ./'
 # Clear terminal display
 alias c='clear'
 
-# Find executables
-alias which='type -all'
-
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
