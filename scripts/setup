@@ -257,10 +257,6 @@ defaults write com.apple.finder FXInfoPanesExpanded -dict \
 
 echo "Configuring dock, dashboard, and hot corners..."
 
-# Remove all default icons from the dock
-defaults delete com.apple.dock persistent-apps
-defaults delete com.apple.dock persistent-others
-
 # Set the icon size of Dock items to 30 pixels
 defaults write com.apple.dock tilesize -int 40
 
