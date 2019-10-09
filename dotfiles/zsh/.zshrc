@@ -115,8 +115,9 @@ alias cp='cp -iv'
 # Preferred 'mv' implementation
 alias mv='mv -iv'
 
-# Preferred 'ls' implementation
-alias ll='ls -FGlAhp'
+# Remove default alias / Preferred 'ls' implementation
+unalias ll
+alias ll='ls -la'
 
 # Preferred 'cat' implementation
 cat() { bat "$@" ; }
@@ -141,6 +142,14 @@ alias sudo='sudo '
 
 # Moves a file to the macOS trash
 trash() { command mv "$@" $HOME/.Trash ; }
+
+# Remove default alias / Make a directory and enter it
+unalias md
+md() { mkdir -p "$@" && cd "$@" ; }
+
+# Remove default alias / Remove a directory and its files
+unalias rd
+rd() { rm -rf "$@" ; }
 
 # Lock the screen (when going AFK)
 alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
