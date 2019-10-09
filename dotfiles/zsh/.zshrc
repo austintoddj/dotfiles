@@ -13,7 +13,19 @@ export ZSH="/Users/todd/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="spaceship"
+
+# Adds a newline character before each prompt line
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+
+# Make the prompt span across two lines
+SPACESHIP_PROMPT_SEPARATE_LINE=false
+
+# While in git repo, show only root directory and folders inside it
+SPACESHIP_DIR_TRUNC_REPO=false
+
+# Number of folders of cwd to show in prompt, 0 to show all
+SPACESHIP_DIR_TRUNC=0
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
