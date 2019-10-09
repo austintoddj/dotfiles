@@ -21,6 +21,9 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 # Make the prompt span across two lines
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 
+# Show execution time
+SPACESHIP_EXEC_TIME_SHOW=false
+
 # Current Node.js section
 SPACESHIP_NODE_SHOW=false
 
