@@ -21,6 +21,12 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 # Make the prompt span across two lines
 SPACESHIP_PROMPT_SEPARATE_LINE=false
 
+# Current Node.js section
+SPACESHIP_NODE_SHOW=false
+
+# Show PHP section
+SPACESHIP_PHP_SHOW=false
+
 # While in git repo, show only root directory and folders inside it
 SPACESHIP_DIR_TRUNC_REPO=false
 
