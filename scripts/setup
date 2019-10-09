@@ -10,28 +10,8 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 # PACKAGES
 # ==================================================================
 
-echo "Installing Composer"
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === 'a5c698ffe4b8e849a443b120cd5ba38043260d5c4023dbf93e1558871f1f07f58274fc6f4c93bcfd858c6bd0775cd8d1') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-
-sudo mkdir -p /usr/local/bin
-sudo mv composer.phar /usr/local/bin/composer
-
-echo "Installing Composer packages..."
-composer_packages=(
-  "laravel/installer"
-  "laravel/valet"
-)
-for package in "${composer_packages[@]}"; do
-  composer global require "$package"
-done
-
-echo "Installing Laravel Valet..."
-valet install
-
 echo "Installing Homebrew..."
+
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "Installing Homebrew packages..."
@@ -43,6 +23,7 @@ homebrew_packages=(
   "mas"
   "mysql"
   "neofetch"
+  "php"
   "sqlite"
   "speedtest-cli"
   "tldr"
@@ -54,11 +35,39 @@ for package in "${homebrew_packages[@]}"; do
   brew install "$package"
 done
 
+echo "Installing Composer"
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'a5c698ffe4b8e849a443b120cd5ba38043260d5c4023dbf93e1558871f1f07f58274fc6f4c93bcfd858c6bd0775cd8d1') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+
+sudo mkdir -p /usr/local/bin
+sudo mv composer.phar /usr/local/bin/composer
+
+echo "Installing Composer packages..."
+
+composer_packages=(
+  "laravel/installer"
+  "laravel/valet"
+)
+
+for package in "${composer_packages[@]}"; do
+  composer global require "$package"
+done
+
+echo "Installing Laravel Valet..."
+
+valet install
+
 # ==================================================================
 # APPS / FONTS
 # ==================================================================
 
 echo "Installing Homebrew cask apps..."
+
+brew tap buo/cask-upgrade
+brew tap homebrew/cask-fonts
 
 homebrew_casks=(
   "1password"
@@ -66,12 +75,14 @@ homebrew_casks=(
   "cleanmymac"
   "dropbox"
   "firefox"
+  "font-fira-code"
   "google-chrome"
   "macdown"
   "phpstorm"
   "postman"
   "sequel-pro-nightly"
   "slack"
+  "font-source-code-pro"
   "spotify"
   "sublime-text"
   "tableplus"
@@ -82,8 +93,6 @@ homebrew_casks=(
 for cask in "${homebrew_casks[@]}"; do
   brew cask install "$cask"
 done
-
-brew tap buo/cask-upgrade
 
 echo "Installing Mac App Store apps..."
 
