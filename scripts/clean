@@ -4,8 +4,7 @@ set -euo pipefail
 # Ask for the administrator password upfront
 sudo -v
 
-# Keep-alive: update existing `sudo` time stamp until setup
-# has finished
+# Keep-alive: update existing `sudo` time stamp until setup has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # ==================================================================
@@ -18,7 +17,7 @@ killall node || true
 # ARTIFACTS
 # ==================================================================
 
-# Remove unused homebrew artifacts
+# Remove unused Homebrew artifacts
 brew cleanup
 brew services cleanup
 brew cu --cleanup
@@ -46,7 +45,8 @@ deep-git-prune ()
 {
   IFS=$'\n\t'
 
-  # Remove merged git branches and stale remote references other than master and the current branch in each git directory
+  # Remove merged git branches and stale remote references other
+  # than master and the current branch in each git directory
   set +e
   LOCAL_BRANCHES=$(git branch --merged master | grep -v -e 'master' -e '\*' | tr -d ' ')
   set -e
@@ -61,30 +61,4 @@ deep-git-prune ()
 }
 
 cd "$HOME/Sites"
-
 for i in */.git; do ( echo $i; cd $i/..; deep-git-prune; ); done
-
-# ==================================================================
-# REPO STATES
-# ==================================================================
-
-deep-git-status ()
-{
-  cd "$HOME/Sites"
-  find . -path "*/.git" -maxdepth 2 -print -execdir git status ";"
-}
-
-output=$(deep-git-status | grep \
--e "Untracked files:" \
--e "Changes not staged for commit:"  \
--e "Changes to be committed:" \
--e "Your branch is ahead" \
-)
-
-if [ -z "$output" ]
-then
-  echo "All git repos are clean"
-else
-  echo "Clean dirty git repos!"
-  deep-git-status
-fi
