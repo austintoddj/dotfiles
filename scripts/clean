@@ -20,7 +20,11 @@ killall node || true
 # Remove unused Homebrew artifacts
 brew cleanup
 brew services cleanup
-brew cu --cleanup
+
+homebrew_casks=($(brew cask list))
+for cask in "${homebrew_casks[@]}"; do
+  brew cu "$cask" --all --yes --verbose --cleanup
+done
 
 # Remove .DS_Store files
 find ~ -name '.DS_Store' -delete
@@ -61,4 +65,10 @@ deep-git-prune ()
 }
 
 cd "$HOME/Sites"
+for i in */.git; do ( echo $i; cd $i/..; deep-git-prune; ); done
+
+cd "$HOME/Sites/cnvs"
+for i in */.git; do ( echo $i; cd $i/..; deep-git-prune; ); done
+
+cd "$HOME/Sites/ozaukeechristian"
 for i in */.git; do ( echo $i; cd $i/..; deep-git-prune; ); done
