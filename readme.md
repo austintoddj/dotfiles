@@ -9,14 +9,14 @@ This repository contains automated setup scripts for my preferred tools and dev-
 > **Warning:** If you want to give this setup a try, you should first fork this repository, review the code, and remove things you don’t want or need. Don’t blindly use my settings unless you know what they entail. *Use at your own risk!*
 
 ```sh
-usage:
-    SHELL_SCRIPTS_PATH="{where you cloned this repo}/scripts"		
-    export PATH="$SHELL_SCRIPTS_PATH:$PATH"
-
-available commands:
-    setup           Run the installer and system configuration
-    update          Update all packages and apps
-    clean           Purge caches and prune git repos
+Usage:
+  SHELL_SCRIPTS_PATH="{where-you-cloned-this-repo}/scripts"		
+  export PATH="$SHELL_SCRIPTS_PATH:$PATH"
+    
+Available Commands:
+  setup     run the installer and system configuration
+  update    update all packages and apps
+  clean     purge caches and prune git repos
 ```
 
 ## Thanks to...
