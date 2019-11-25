@@ -18,7 +18,7 @@ brew upgrade
 
 homebrew_casks=($(brew cask list))
 for cask in "${homebrew_casks[@]}"; do
-  brew cu "$cask" --force --all --yes
+  brew cu "$cask" --all --yes --force --quiet
 done
 
 # COMPOSER
