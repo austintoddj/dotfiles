@@ -23,7 +23,7 @@ brew services cleanup
 
 homebrew_casks=($(brew cask list))
 for cask in "${homebrew_casks[@]}"; do
-  brew cu "$cask" --all --yes --verbose --cleanup
+  brew cu "$cask" --all --yes --cleanup
 done
 
 # Remove .DS_Store files
