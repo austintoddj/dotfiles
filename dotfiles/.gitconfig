@@ -83,3 +83,7 @@
     # installations. To use `simple` instead, add this to your `~/.extra` file:
     # `git config --global push.default simple`. See http://git.io/mMah-w.
     default = simple
+
+[pager]
+    diff = false
+    branch = false
