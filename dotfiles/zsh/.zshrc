@@ -30,6 +30,9 @@ SPACESHIP_NODE_SHOW=false
 # Show package version
 SPACESHIP_PACKAGE_SHOW=false
 
+# Show Docker version
+SPACESHIP_DOCKER_SHOW=false
+
 # Show PHP section
 SPACESHIP_PHP_SHOW=false
 
