@@ -93,14 +93,14 @@ homebrew_casks=(
 )
 
 for cask in "${homebrew_casks[@]}"; do
-  brew cask install "$cask"
+  brew cask install --no-quarantine "$cask"
 done
 
 echo "Installing Mac App Store apps..."
 
 mas_apps=(
-  #"523620159" # CleanMyDrive 2
-  #"497799835" # Xcode
+  "523620159" # CleanMyDrive 2
+  "497799835" # Xcode
 )
 
 for app in "${mas_apps[@]}"; do
