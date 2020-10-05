@@ -16,7 +16,7 @@ echo "Updating Homebrew packages"
 brew update
 brew upgrade
 
-homebrew_casks=($(brew cask list))
+homebrew_casks=($(brew list --cask))
 brew cu --all --yes --force --quiet --cleanup
 
 # COMPOSER
