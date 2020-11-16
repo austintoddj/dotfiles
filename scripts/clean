@@ -66,6 +66,3 @@ deep-git-prune ()
 
 cd "$HOME/Sites"
 for i in */.git; do ( echo $i; cd $i/..; deep-git-prune; ); done
-
-cd "$HOME/Sites/ozaukeechristian"
-for i in */.git; do ( echo $i; cd $i/..; deep-git-prune; ); done
