@@ -23,11 +23,8 @@ homebrew_packages=(
   "gpg"
   "mas"
   "mysql"
-  "neofetch"
   "php"
   "sqlite"
-  "speedtest-cli"
-  "tldr"
   "yarn"
   "zsh"
   "zsh-completions"
@@ -39,7 +36,7 @@ done
 echo "Installing Composer"
 
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('sha384', 'composer-setup.php') === 'e5325b19b381bfd88ce90a5ddb7823406b2a38cff6bb704b0acc289a09c8128d4a8ce2bbafcd1fcbdc38666422fe2806') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php -r "if (hash_file('sha384', 'composer-setup.php') === '756890a4488ce9024fc62c56153228907f1545c228516cbf63f885e036d37e9a59d27d63f46af1d4d07ee0f76181c7d3') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
 
@@ -74,17 +71,15 @@ homebrew_casks=(
   "1password"
   "bettertouchtool"
   "cleanmymac"
-  "discord"
   "dropbox"
   "font-fira-code"
+  "font-source-code-pro"
   "google-chrome"
   "macdown"
   "phpstorm"
   "postman"
   "sequel-pro-nightly"
   "slack"
-  "font-fira-code"
-  "font-source-code-pro"
   "spotify"
   "sublime-text"
   "tableplus"
@@ -114,6 +109,9 @@ zsh $HOME/Sites/dev-setup/fonts/install
 # ==================================================================
 
 echo "Configuring general UI/UX..."
+
+# Disable the sound effects on boot
+sudo nvram SystemAudioVolume=" "
 
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
