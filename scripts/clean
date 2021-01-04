@@ -21,7 +21,7 @@ killall node || true
 brew cleanup
 brew services cleanup
 
-homebrew_casks=($(brew cask list))
+homebrew_casks=($(brew cask --list))
 for cask in "${homebrew_casks[@]}"; do
   brew cu "$cask" --all --yes --cleanup
 done
