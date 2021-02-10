@@ -1,9 +1,9 @@
 #!/bin/bash
 #
-# bootstrap installs things.
+# turn on the lights.
 
 function bootstrapTerminal() {
-	sudo -v #ask password beforehand
+	sudo -v # Ask password beforehand
 	source ~/.dotfiles/installscript
 }
 

@@ -27,7 +27,7 @@ ln -s $HOME/.dotfiles/shell/.vim $HOME/.vim
 ln -s $HOME/.dotfiles/macos/.mackup.cfg $HOME/.mackup.cfg
 
 # Activate z
-cd ~/.dotfiles/shell
+cd $HOME/.dotfiles/shell
 chmod +x z.sh
 
 echo 'Configure npm'
@@ -69,14 +69,6 @@ echo 'Install wget'
 echo '------------'
 brew install wget --overwrite
 
-echo 'Install httpie'
-echo '--------------'
-brew install httpie
-
-echo 'Install ncdu'
-echo '------------'
-brew install ncdu
-
 echo 'Install hub'
 echo '-----------'
 brew install hub
@@ -84,10 +76,6 @@ brew install hub
 echo 'Install ack'
 echo '-----------'
 brew install ack
-
-echo 'Install doctl'
-echo '-------------'
-brew install doctl
 
 echo 'Install brew-cask'
 echo '-----------------'
@@ -123,18 +111,6 @@ echo 'Install redis'
 echo '-------------'
 pecl install redis
 
-echo 'Install laravel envoy'
-echo '---------------------'
-composer global require "laravel/envoy=~2.0"
-
-echo 'Install phpunit-watcher'
-echo '-----------------------'
-composer global require spatie/phpunit-watcher
-
-echo 'Install mixed-content-scanner-cli'
-echo '---------------------------------'
-composer global require spatie/mixed-content-scanner-cli
-
 echo 'Install laravel valet'
 echo '---------------------'
 composer global require laravel/valet
@@ -145,13 +121,17 @@ echo '-------------'
 brew install mysql
 brew services start mysql
 
+echo 'Install sqlite'
+echo '-------------'
+brew install sqlite
+
+echo 'Install Git Flow'
+echo '-------------'
+brew install git-flow-avh
+
 echo 'Install yarn'
 echo '------------'
 brew install yarn
-
-echo 'Install ghostscript'
-echo '-------------------'
-brew install ghostscript
 
 echo 'Install mackup'
 echo '--------------'
@@ -161,11 +141,15 @@ echo 'Install zsh-autosuggestions'
 echo '---------------------------'
 brew install zsh-autosuggestions
 
+echo 'Install fonts'
+echo '---------------------------'
+brew install font-fira-code font-source-code-pro font-menlo-for-powerline
+
 echo '++++++++++++++++++++++++++++++'
 echo '++++++++++++++++++++++++++++++'
 echo 'All done!'
-echo 'Things to do to make the agnoster terminal theme work:'
-echo '1. Install menlo patched font included in ~/.dotfiles/misc https://gist.github.com/qrush/1595572/raw/Menlo-Powerline.otf'
+echo 'Things to do to make the Spaceship terminal theme work:'
+echo '1. Install the spaceship-prompt by running `npm install -g spaceship-prompt`'
 echo '2. Install patched solarized theme included in ~/.dotfiles/misc'
 
 echo '++++++++++++++++++++++++++++++'
