@@ -1,0 +1,73 @@
+# Preferred 'cat' implementation
+cat() { bat "$@" ; }
+
+# Moves a file to the macOS trash
+trash() { command mv "$@" $HOME/.Trash ; }
+
+# Remove default alias / Make a directory and enter it
+unalias md
+md() { mkdir -p "$@" && cd "$@" ; }
+
+# Remove default alias / Remove a directory and its files
+unalias rd
+rd() { rm -rf "$@" ; }
+
+# To create a ZIP archive of a folder
+zipf() { zip -r "$1".zip "$1" ; }
+
+# Extract most know archives with one command
+extract() {
+    if [ -f $1 ] ; then
+      case $1 in
+        *.tar.bz2)   tar xjf $1     ;;
+        *.tar.gz)    tar xzf $1     ;;
+        *.bz2)       bunzip2 $1     ;;
+        *.rar)       unrar e $1     ;;
+        *.gz)        gunzip $1      ;;
+        *.tar)       tar xf $1      ;;
+        *.tbz2)      tar xjf $1     ;;
+        *.tgz)       tar xzf $1     ;;
+        *.zip)       unzip $1       ;;
+        *.Z)         uncompress $1  ;;
+        *.7z)        7z x $1        ;;
+        *)     echo "'$1' cannot be extracted via extract()" ;;
+         esac
+     else
+         echo "'$1' is not a valid file"
+     fi
+}
+
+# Find file under the current directory
+ff () { /usr/bin/find . -name "$@" ; }
+
+# Find file whose name starts with a given string
+ffs() { /usr/bin/find . -name "$@"'*' ; }
+
+# Find file whose name ends with a given string
+ffe() { /usr/bin/find . -name '*'"$@" ; }
+
+# Search for a file using macOS Spotlight's metadata
+spotlight() { mdfind "kMDItemDisplayName == '$@'wc"; }
+
+# Find out the pid of a specified process
+findPid() { lsof -t -c "$@" ; }
+
+# List processes owned by my user
+my_ps() { ps $@ -u $USER -o pid,%cpu,%mem,start,time,bsdtime,command ; }
+
+# Display useful host related information
+ii() {
+    echo -e "\n${COL_GREEN}You are currently logged in to:$COL_RESET " ; echo -e $HOSTNAME
+    echo -e "\n${COL_GREEN}Additional information:$COL_RESET $NC " ; uname -a
+    echo -e "\n${COL_GREEN}Users logged on:$COL_RESET $NC " ; w -h
+    echo -e "\n${COL_GREEN}Current date:$COL_RESET $NC " ; date
+    echo -e "\n${COL_GREEN}Machine stats:$COL_RESET $NC " ; uptime
+    echo -e "\n${COL_GREEN}Current network location:$COL_RESET $NC " ; scselect
+    echo -e "\n${COL_GREEN}Public facing IP Address:$COL_RESET $NC " ; myip
+    echo
+}
+
+# Composer
+composer-link() {
+    composer config repositories.local '{"type": "path", "url": "'$1'"}' --file composer.json
+}
