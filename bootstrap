@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# turn on the lights.
+
+function bootstrapTerminal() {
+	sudo -v # Ask password beforehand
+	source ~/.dotfiles/installscript
+}
+
+
+echo 'Bootstrap terminal'
+echo '------------------'
+echo 'This will reset your terminal. Are you sure you want to to this? (y/n) '
+read -p 'Answer: '  reply
+
+if [[ $reply =~ ^[Yy]$ ]]
+then
+   bootstrapTerminal
+fi
