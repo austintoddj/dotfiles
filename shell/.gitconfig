@@ -19,7 +19,7 @@
     # Commit all changes
     ca = !git add -A && git commit -av
 
-    # Push master/develop and all tags
+    # Push `master` and `develop` and all associated tags for a release
     pa = !"git push origin master && git push origin develop && git push --tags"
 
     # List contributors with number of commits
@@ -72,7 +72,7 @@
 
 [help]
     # Automatically correct and execute mistyped commands
-    autocorrect = 1
+    autocorrect = 20
 
 [merge]
     # Include summaries of merged commits in newly created merge commit messages
