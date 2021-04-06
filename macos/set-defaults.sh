@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 echo 'start macos/set-defaults.sh'
 
 # Ask for the administrator password upfront
