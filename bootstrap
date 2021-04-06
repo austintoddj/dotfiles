@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 #
 # turn on the lights.
 
